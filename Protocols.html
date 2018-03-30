@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -461,7 +509,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBAction</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBAction</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBAction</span></code></pre>
 
                         </div>
                       </div>
@@ -498,7 +551,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionContext</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionContext</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBActionContext</span></code></pre>
 
                         </div>
                       </div>
@@ -534,7 +592,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBActionFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -574,7 +637,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionHandler</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionHandler</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBActionHandler</span></code></pre>
 
                         </div>
                       </div>
@@ -617,7 +685,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionPerformer</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionPerformer</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBActionPerformer</span></code></pre>
 
                         </div>
                       </div>
@@ -656,7 +729,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionRegistry</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBActionRegistry</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBActionRegistry</span></code></pre>
 
                         </div>
                       </div>
@@ -688,7 +766,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBAsyncActionDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBAsyncActionDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBAsyncActionDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -722,6 +805,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBAsyncAction</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBAction.html">HUBAction</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBAsyncAction</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBAction.html">HUBAction</a></span></code></pre>
 
                         </div>
                       </div>
@@ -784,7 +872,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponent</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponent</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponent</span></code></pre>
 
                         </div>
                       </div>
@@ -821,6 +914,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentActionObserver</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentActionObserver</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -863,6 +961,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentActionPerformer</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentActionPerformer</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -898,6 +1001,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentContentOffsetObserver</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentContentOffsetObserver</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -931,7 +1039,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -975,6 +1088,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentFactoryShowcaseNameProvider</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentFactoryShowcaseNameProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1010,7 +1128,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentFallbackHandler</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentFallbackHandler</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentFallbackHandler</span></code></pre>
 
                         </div>
                       </div>
@@ -1046,6 +1169,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentImageData</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentImageData</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1090,6 +1218,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentImageDataBuilder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentImageDataBuilder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1130,7 +1263,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentImageDataJSONSchema</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentImageDataJSONSchema</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentImageDataJSONSchema</span></code></pre>
 
                         </div>
                       </div>
@@ -1168,7 +1306,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentLayoutManager</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentLayoutManager</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentLayoutManager</span></code></pre>
 
                         </div>
                       </div>
@@ -1215,6 +1358,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentModel</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentModel</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1252,6 +1400,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentModelBuilder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentModelBuilder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1298,7 +1451,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentModelJSONSchema</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentModelJSONSchema</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentModelJSONSchema</span></code></pre>
 
                         </div>
                       </div>
@@ -1337,7 +1495,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentRegistry</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentRegistry</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentRegistry</span></code></pre>
 
                         </div>
                       </div>
@@ -1380,7 +1543,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentShowcaseManager</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentShowcaseManager</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentShowcaseManager</span></code></pre>
 
                         </div>
                       </div>
@@ -1419,7 +1587,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentShowcaseSnapshotGenerator</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentShowcaseSnapshotGenerator</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentShowcaseSnapshotGenerator</span></code></pre>
 
                         </div>
                       </div>
@@ -1455,6 +1628,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentTarget</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentTarget</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1494,6 +1672,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentTargetBuilder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentTargetBuilder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1536,7 +1719,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentTargetJSONSchema</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentTargetJSONSchema</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentTargetJSONSchema</span></code></pre>
 
                         </div>
                       </div>
@@ -1576,6 +1764,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentViewObserver</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentViewObserver</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1612,7 +1805,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentChildDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentChildDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentChildDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -1645,6 +1843,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentWithChildren</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentWithChildren</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1680,6 +1883,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentWithImageHandling</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentWithImageHandling</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1728,6 +1936,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentWithRestorableUIState</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentWithRestorableUIState</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1763,6 +1976,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentWithScrolling</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponentWithChildren.html">HUBComponentWithChildren</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentWithScrolling</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponentWithChildren.html">HUBComponentWithChildren</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1787,9 +2005,7 @@
                         <p>Extended Hub component protocol that adds the ability to respond to selection events</p>
 
 <p>Use this protocol if your component adjusts its appearance when the user interacts with it,
-  such as when the user highlights it through a touch down, or selects it through a tap. A
-  normal use case for this protocol is when a component is implemented using a table- or
-  collection view cell, and you wish to update the cell&rsquo;s highlighted/selected status.</p>
+  such as when the user highlights it through a touch down, or selects it through a tap.</p>
 
 <p>For more information, see <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> and <code><a href="Enums/HUBComponentSelectionState.html">HUBComponentSelectionState</a></code>.</p>
 
@@ -1800,6 +2016,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBComponentWithSelectionState</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBComponent.html">HUBComponent</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBComponentWithSelectionState</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBComponent.html">HUBComponent</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1831,7 +2052,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBConnectivityStateResolverObserver</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBConnectivityStateResolverObserver</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBConnectivityStateResolverObserver</span></code></pre>
 
                         </div>
                       </div>
@@ -1871,7 +2097,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBConnectivityStateResolver</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBConnectivityStateResolver</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBConnectivityStateResolver</span></code></pre>
 
                         </div>
                       </div>
@@ -1914,7 +2145,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -1966,7 +2202,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperation</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperation</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperation</span></code></pre>
 
                         </div>
                       </div>
@@ -2003,6 +2244,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationActionObserver</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationActionObserver</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2046,6 +2292,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationActionPerformer</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationActionPerformer</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2079,7 +2330,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationContext</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationContext</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationContext</span></code></pre>
 
                         </div>
                       </div>
@@ -2117,7 +2373,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -2155,6 +2416,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationWithInitialContent</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationWithInitialContent</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2198,6 +2464,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentOperationWithPaginatedContent</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentOperationWithPaginatedContent</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2234,7 +2505,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentReloadPolicy</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBContentReloadPolicy</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBContentReloadPolicy</span></code></pre>
 
                         </div>
                       </div>
@@ -2269,7 +2545,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBFeatureInfo</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBFeatureInfo</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBFeatureInfo</span></code></pre>
 
                         </div>
                       </div>
@@ -2304,7 +2585,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBFeatureRegistry</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBFeatureRegistry</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBFeatureRegistry</span></code></pre>
 
                         </div>
                       </div>
@@ -2340,7 +2626,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBIcon</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBIcon</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBIcon</span></code></pre>
 
                         </div>
                       </div>
@@ -2376,7 +2667,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBIconImageResolver</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBIconImageResolver</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBIconImageResolver</span></code></pre>
 
                         </div>
                       </div>
@@ -2412,7 +2708,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoaderDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoaderDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBImageLoaderDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -2448,7 +2749,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoader</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoader</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBImageLoader</span></code></pre>
 
                         </div>
                       </div>
@@ -2487,7 +2793,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoaderFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBImageLoaderFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBImageLoaderFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -2513,9 +2824,8 @@
                       <div class="abstract">
                         <p>Protocol defining the public API for adding JSON data to a Hub Framework model builder</p>
 
-<p>Builders that support JSON data will conform to this protocol. Most builders only support Dictionary-based
-  JSON, except for <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> that supports Array-based JSON for defining an array of body
-  component models.</p>
+<p>Builders that support JSON data will conform to this protocol. Most builders only support Dictionary-based JSON,
+  except for <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> that supports Array-based JSON for defining an array of body component models.</p>
 
                         <a href="Protocols/HUBJSONCompatibleBuilder.html" class="slightly-smaller">See more</a>
                       </div>
@@ -2523,7 +2833,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONCompatibleBuilder</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONCompatibleBuilder</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONCompatibleBuilder</span></code></pre>
 
                         </div>
                       </div>
@@ -2570,7 +2885,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONPath</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONPath</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONPath</span></code></pre>
 
                         </div>
                       </div>
@@ -2614,6 +2934,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONBoolPath</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONBoolPath</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2653,6 +2978,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONIntegerPath</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONIntegerPath</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2696,6 +3026,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONStringPath</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONStringPath</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2735,6 +3070,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONURLPath</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONURLPath</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2778,6 +3118,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONDictionaryPath</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONDictionaryPath</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2812,7 +3157,7 @@
 <p>The Hub Framework uses a path-based approach to JSON parsing, that enables the API user to describe how to
   retrieve data from a JSON structure using paths - sequences of operations that each perform a JSON parsing task,
   such as going to a key in a dictionary, or iterating over an array. To customize a path, you can either change
-  it directly, or replace it with a new one created from this schema&rsquo;s  <code>-createNewPath</code> method.</p>
+  it directly, or replace it with a new one created from this schema&rsquo;s  <code><a href="Protocols/HUBJSONSchema.html#/c:objc(pl)HUBJSONSchema(im)createNewPath">-createNewPath</a></code> method.</p>
 
 <p>For a more in-depth description on how paths work, see the documentation for <code><a href="Protocols/HUBJSONPath.html">HUBJSONPath</a></code> and <code><a href="Protocols/HUBMutableJSONPath.html">HUBMutableJSONPath</a></code>.</p>
 
@@ -2822,7 +3167,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONSchema</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONSchema</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONSchema</span></code></pre>
 
                         </div>
                       </div>
@@ -2852,7 +3202,7 @@
   to this protocol attached to it, that enables you to create and register custom JSON schemas for use in the
   Hub Framework.</p>
 
-<p>To customize a schema, create one using <code>-createNewSchema</code>, then set up the returned schema to match the JSON
+<p>To customize a schema, create one using <code><a href="Protocols/HUBJSONSchemaRegistry.html#/c:objc(pl)HUBJSONSchemaRegistry(im)createNewSchema">-createNewSchema</a></code>, then set up the returned schema to match the JSON
   format that you are expecting, and finally register it with the registry.</p>
 
 <p>For more information on how Hub Framework JSON schemas work; see <code><a href="Protocols/HUBJSONSchema.html">HUBJSONSchema</a></code>.</p>
@@ -2863,7 +3213,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONSchemaRegistry</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBJSONSchemaRegistry</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBJSONSchemaRegistry</span></code></pre>
 
                         </div>
                       </div>
@@ -2898,7 +3253,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBLiveServiceDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBLiveServiceDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBLiveServiceDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -2938,7 +3298,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBLiveService</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBLiveService</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBLiveService</span></code></pre>
 
                         </div>
                       </div>
@@ -2995,7 +3360,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBMutableJSONPath</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBMutableJSONPath</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBMutableJSONPath</span></code></pre>
 
                         </div>
                       </div>
@@ -3030,6 +3400,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBSerializable</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBSerializable</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -3061,7 +3436,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewControllerDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -3099,7 +3479,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewControllerFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -3135,7 +3520,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerScrollHandler</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerScrollHandler</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewControllerScrollHandler</span></code></pre>
 
                         </div>
                       </div>
@@ -3175,6 +3565,11 @@
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModel</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModel</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBSerializable.html">HUBSerializable</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -3211,6 +3606,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelBuilder</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModelBuilder</span> <span class="p">:</span> <span class="kt"><a href="Protocols/HUBJSONCompatibleBuilder.html">HUBJSONCompatibleBuilder</a></span></code></pre>
 
                         </div>
                       </div>
@@ -3257,7 +3657,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelJSONSchema</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelJSONSchema</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModelJSONSchema</span></code></pre>
 
                         </div>
                       </div>
@@ -3292,7 +3697,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoaderDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoaderDelegate</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModelLoaderDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -3324,7 +3734,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoader</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoader</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModelLoader</span></code></pre>
 
                         </div>
                       </div>
@@ -3361,7 +3776,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoaderFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewModelLoaderFactory</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">HUBViewModelLoaderFactory</span></code></pre>
 
                         </div>
                       </div>
@@ -3377,7 +3797,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#setup-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='setup-guide'>Setup Guide</h1>
+            <h1 id='setup-guide' class='heading'>Setup Guide</h1>
 
 <p>Welcome to the Hub Framework setup guide! This guide aims to help you get set up with the framework in either a new or existing application.</p>
 
@@ -435,23 +483,23 @@
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#linking-with-system-configuration">Linking with <code>SystemConfiguration</code></a></li>
-<li><a href="#creating-a-hubmanager-instance">Creating a <code>HUBManager</code> instance</a></li>
+<li><a href="#creating-a-hubmanager-instance">Creating a <code><a href="Classes/HUBManager.html">HUBManager</a></code> instance</a></li>
 <li><a href="#setting-up-the-navigation-system">Setting up the navigation system</a></li>
 <li><a href="#further-customization">Further customization</a></li>
 </ul>
-<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
+<h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>The Hub Framework is built to be easily integrated into apps of any size, with minimal impact on existing code. You don’t need to rewrite your app to start using it, and it has a very modular design that gives you a high degree of flexibility.</p>
 
 <p>The recommendation is to start with as many defaults as you can, and then pick and choose what to customize after you’re set up.</p>
-<a href='#linking-with-code-systemconfiguration-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='linking-with-code-systemconfiguration-code'>Linking with <code>SystemConfiguration</code></h2>
+<h2 id='linking-with-code-systemconfiguration-code' class='heading'>Linking with <code>SystemConfiguration</code></h2>
 
 <p>The Hub Framework requires you to link with Apple&rsquo;s <code>SystemConfiguration</code> framework in order for its connectivity state resolver to work. To do so, simply add <code>SystemConfiguration</code> to your app target&rsquo;s <q>Linked Frameworks and Libraries</q> under the <q>General</q> tab in your project settings in Xcode.</p>
-<a href='#creating-a-code-hubmanager-code-instance' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-a-code-hubmanager-code-instance'>Creating a <code>HUBManager</code> instance</h2>
+<h2 id='creating-a-code-hubmanager-code-instance' class='heading'>Creating a <code><a href="Classes/HUBManager.html">HUBManager</a></code> instance</h2>
 
-<p>Each application using the Hub Framework will have one instance of the <code>HUBManager</code> class, which manages an instance of the framework. It’s recommended that you create this object early in your application’s lifecycle and keep it somewhere accessible - for example in your <code>AppDelegate</code>.</p>
+<p>Each application using the Hub Framework will have one instance of the <code><a href="Classes/HUBManager.html">HUBManager</a></code> class, which manages an instance of the framework. It’s recommended that you create this object early in your application’s lifecycle and keep it somewhere accessible - for example in your <code>AppDelegate</code>.</p>
 
-<p>There are a few different ways to setup <code>HUBManager</code>, each providing different levels of customizability. The simplest way is to use the defaults, and just supply the following two parameters:</p>
+<p>There are a few different ways to setup <code><a href="Classes/HUBManager.html">HUBManager</a></code>, each providing different levels of customizability. The simplest way is to use the defaults, and just supply the following two parameters:</p>
 
 <ul>
 <li><code>componentMargin</code>: What margin that should be used in between components.</li>
@@ -460,16 +508,16 @@
 
 <p>For an example of how to set up the above, see the <a href="https://github.com/spotify/HubFramework/tree/master/demo">demo app</a> which uses this way of setting up the Hub Framework.</p>
 
-<p>There are also several optional parameters that you can choose to supply in case you want to further customize how the Hub Framework behaves. For more information about those, see the documentation for <code>HUBManager</code>, or the <a href="#further-customization">Further customization section</a>.</p>
-<a href='#setting-up-the-navigation-system' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setting-up-the-navigation-system'>Setting up the navigation system</h2>
+<p>There are also several optional parameters that you can choose to supply in case you want to further customize how the Hub Framework behaves. For more information about those, see the documentation for <code><a href="Classes/HUBManager.html">HUBManager</a></code>, or the <a href="#further-customization">Further customization section</a>.</p>
+<h2 id='setting-up-the-navigation-system' class='heading'>Setting up the navigation system</h2>
 
 <p>The Hub Framework encourages the use of a view URI-based navigation system. This enables views to be completely decoupled, as they are no longer creating instances of each other but rather opening a URI, and having the system performing the actual navigation.</p>
-<a href='#using-navigation-by-opening-urls' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-navigation-by-opening-urls'>Using navigation by opening URLs</h3>
+<h3 id='using-navigation-by-opening-urls' class='heading'>Using navigation by opening URLs</h3>
 
 <p>By default, the framework calls <code>[UIApplication openURL:]</code> for any <code>target.URI</code> that a component’s model has, once that component was selected by the user (through a tap).</p>
 
 <p>To make iOS route some/all of those URIs to your app, define what URL types and schemes that your app supports in your <code>Info.plist</code> file. Here&rsquo;s an example where we add support for the <code>hub-demo</code> scheme:</p>
-<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>CGBundleURLTypes<span class="nt">&lt;/key&gt;</span>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>CFBundleURLTypes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
     <span class="nt">&lt;dict&gt;</span>
         <span class="nt">&lt;key&gt;</span>CFBundleURLName<span class="nt">&lt;/key&gt;</span>
@@ -484,7 +532,7 @@
 
 <p>Once you&rsquo;ve added the appropriate URL information to your <code>Info.plist</code>, any URL matching that information will be routed to your app delegate&rsquo;s <code>application:openURL:options:</code> method. This is an ideal place to perform the actual navigation.</p>
 
-<p>To perform navigation, the first thing you’d want to do is to create a view controller to navigate to. To do that, use <code>HUBViewControllerFactory</code>, available on <code>HUBManager</code>. Then, push any view controller that was created onto your navigation controller, like this:</p>
+<p>To perform navigation, the first thing you’d want to do is to create a view controller to navigate to. To do that, use <code><a href="Protocols/HUBViewControllerFactory.html">HUBViewControllerFactory</a></code>, available on <code><a href="Classes/HUBManager.html">HUBManager</a></code>. Then, push any view controller that was created onto your navigation controller, like this:</p>
 <pre class="highlight plaintext"><code>- (BOOL)application:(UIApplication *)app 
             openURL:(NSURL *)url 
             options:(NSDictionary&lt;UIApplicationOpenURLOptionsKey,id&gt; *)options
@@ -497,11 +545,11 @@
     }
 }
 </code></pre>
-<a href='#using-custom-navigation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-custom-navigation'>Using custom navigation</h3>
+<h3 id='using-custom-navigation' class='heading'>Using custom navigation</h3>
 
-<p>In case you either can’t or don’t want to implement navigation like above, you can supply a default <code>HUBActionHandler</code> when setting up <code>HUBManager</code>, which will give you full control to handle all types of actions that are performed from within the framework.</p>
+<p>In case you either can’t or don’t want to implement navigation like above, you can supply a default <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code> when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code>, which will give you full control to handle all types of actions that are performed from within the framework.</p>
 
-<p>In this example we use a <code>HUBActionHandler</code> to create view controllers, without opening the view URI through the system:</p>
+<p>In this example we use a <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code> to create view controllers, without opening the view URI through the system:</p>
 <pre class="highlight plaintext"><code>@interface SPTDefaultActionHandler: NSObject &lt;HUBActionHandler&gt;
 
 @property (nonatomic, weak) HUBManager *hubManager;
@@ -534,20 +582,20 @@
 @end
 </code></pre>
 
-<p>The above is only one of many possible implementations. You could, for example, also use actions (<code>HUBAction</code>) to navigate. However, it’s really recommended to go with the default way of opening URLs through the system APIs. That solution also gives you the additional benefit of making it really easy to add deep linking support to you application.</p>
-<a href='#further-customization' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='further-customization'>Further customization</h2>
+<p>The above is only one of many possible implementations. You could, for example, also use actions (<code><a href="Protocols/HUBAction.html">HUBAction</a></code>) to navigate. However, it’s really recommended to go with the default way of opening URLs through the system APIs. That solution also gives you the additional benefit of making it really easy to add deep linking support to you application.</p>
+<h2 id='further-customization' class='heading'>Further customization</h2>
 
 <p>You’re now ready to start building UIs using the Hub Framework. Head over to the <a href="https://spotify.github.io/HubFramework/getting-started-guide.html">getting started guide</a> to learn how to register features and how to build content operations &amp; components.</p>
 
 <p>In case you need it, you can also continue customizing the framework, adding support for additional features.</p>
-<a href='#building-a-custom-component-layout-manager' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='building-a-custom-component-layout-manager'>Building a custom component layout manager</h3>
+<h3 id='building-a-custom-component-layout-manager' class='heading'>Building a custom component layout manager</h3>
 
-<p>In case you want more fine-grained control over how components are laid out, you can supply your own layout manager by conforming to the <code>HUBComponentLayoutManager</code> protocol. A custom layout manager enables you to calculate margins for your components, given a set of layout traits.</p>
+<p>In case you want more fine-grained control over how components are laid out, you can supply your own layout manager by conforming to the <code><a href="Protocols/HUBComponentLayoutManager.html">HUBComponentLayoutManager</a></code> protocol. A custom layout manager enables you to calculate margins for your components, given a set of layout traits.</p>
 
 <p>For more information about how layout works for components, see the <a href="https://spotify.github.io/HubFramework/layout-programming-guide.html">Layout programming guide</a>.</p>
-<a href='#adding-icon-support' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='adding-icon-support'>Adding icon support</h3>
+<h3 id='adding-icon-support' class='heading'>Adding icon support</h3>
 
-<p>The Hub Framework enables you to easily convert string representations of icon identifiers to <code>UIImages</code> in components, through the <code>HUBIcon</code> API. However, before this API can be used, you need to implement a <code>HUBIconImageResolver</code>, which the framework will use to perform this conversion. The image resolver is then passed as <code>iconImageResolver</code> when setting up <code>HUBManager</code>.</p>
+<p>The Hub Framework enables you to easily convert string representations of icon identifiers to <code>UIImages</code> in components, through the <code><a href="Protocols/HUBIcon.html">HUBIcon</a></code> API. However, before this API can be used, you need to implement a <code><a href="Protocols/HUBIconImageResolver.html">HUBIconImageResolver</a></code>, which the framework will use to perform this conversion. The image resolver is then passed as <code>iconImageResolver</code> when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code>.</p>
 
 <p>Here is an example implementation:</p>
 <pre class="highlight plaintext"><code>@interface SPTIconImageResolver: NSObject &lt;HUBIconImageResolver&gt;
@@ -576,9 +624,9 @@
 
 @end
 </code></pre>
-<a href='#defining-a-global-reload-policy' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='defining-a-global-reload-policy'>Defining a global reload policy</h3>
+<h3 id='defining-a-global-reload-policy' class='heading'>Defining a global reload policy</h3>
 
-<p>A <code>HUBContentReloadPolicy</code> is used to determine whether a given view should be reloaded when it is about to re-appear on the screen. They can be defined on a per-feature basis, but you also have the option to supply a global one that is used in case a feature didn’t supply its own. You pass a default content reload policy as <code>defaultContentReloadPolicy</code> when setting up <code>HUBManager</code>.</p>
+<p>A <code><a href="Protocols/HUBContentReloadPolicy.html">HUBContentReloadPolicy</a></code> is used to determine whether a given view should be reloaded when it is about to re-appear on the screen. They can be defined on a per-feature basis, but you also have the option to supply a global one that is used in case a feature didn’t supply its own. You pass a default content reload policy as <code>defaultContentReloadPolicy</code> when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code>.</p>
 
 <p>Here is an example reload policy implementation:</p>
 <pre class="highlight plaintext"><code>@interface SPTDefaultReloadPolicy: NSObject &lt;HUBContentReloadPolicy&gt;
@@ -596,11 +644,11 @@
 
 @end
 </code></pre>
-<a href='#prepended-and-appended-content-operations' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='prepended-and-appended-content-operations'>Prepended and appended content operations</h3>
+<h3 id='prepended-and-appended-content-operations' class='heading'>Prepended and appended content operations</h3>
 
 <p>You can also define system-wide content operations that are either prepended or appended to all views’ content loading chains.</p>
 
-<p>To use this functionality, pass a <code>HUBContentOperationFactory</code> as either <code>prependedContentOperationFactory</code> or <code>appendedContentOperationFactory</code> when setting up <code>HUBManager</code>.</p>
+<p>To use this functionality, pass a <code><a href="Protocols/HUBContentOperationFactory.html">HUBContentOperationFactory</a></code> as either <code>prependedContentOperationFactory</code> or <code>appendedContentOperationFactory</code> when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code>.</p>
 
 <p>To learn more about the content loading chain and content operations, refer to the <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">content programming guide</a>.</p>
 
@@ -612,7 +660,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

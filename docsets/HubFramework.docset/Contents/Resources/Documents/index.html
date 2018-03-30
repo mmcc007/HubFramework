@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -424,15 +472,19 @@
             
             <p><img alt="The Hub Framework" src="readme-banner.jpg" width="100%" max-width=1008></p>
 
-<p><a href="https://travis-ci.org/spotify/HubFramework/branches"><img src="https://travis-ci.org/spotify/HubFramework.svg?branch=master" alt="Build Status"></a>
-<a href="https://codecov.io/github/spotify/HubFramework?branch=master"><img src="https://codecov.io/github/spotify/HubFramework/coverage.svg?branch=master" alt="Coverage Status"></a>
-<a href="https://spotify.github.io/HubFramework"><img src="https://img.shields.io/badge/Documentation-website-blue.svg" alt="Documentation website"></a>
-<a href="https://slackin.spotify.com"><img src="https://slackin.spotify.com/badge.svg" alt="Spotify FOSS Slack"></a></p>
+<p><a href="https://travis-ci.org/mmcc007/HubFramework/branches"><img src="https://travis-ci.org/mmcc007/HubFramework.svg?branch=master" alt="Build Status"></a>
+<a href="https://codecov.io/github/mmcc007/HubFramework?branch=master"><img src="https://codecov.io/github/mmcc007/HubFramework/coverage.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://mmcc007.github.io/HubFramework"><img src="https://img.shields.io/badge/Documentation-website-blue.svg" alt="Documentation website"></a></p>
+<h2 id='deprecated' class='heading'>Deprecated</h2>
+
+<p>The Hub Framework is being phased out at Spotify, and therefore we will not be maintaining it further.</p>
+
+<hr>
 
 <p>Welcome to the Hub Framework - a toolkit for building native, component-driven UIs on iOS. It is designed to enable teams of any size to quickly build, tweak and ship new UI features, in either new or existing apps. It also makes it easy to build backend-driven UIs.</p>
 
 <p>The Hub Framework has two core concepts - <strong>Components</strong> &amp; <strong>Content Operations</strong>.</p>
-<a href='#components' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='components'>Components</h2>
+<h2 id='components' class='heading'>Components</h2>
 
 <p>Instead of building <code>UIViewControllers</code> that each have hard-wired behaviors for UI in terms of controls, data binding &amp; selection handling - a Hub Framework-powered UI is all about components.</p>
 
@@ -441,14 +493,14 @@
 <p>The good news is that you don&rsquo;t have to rewrite your existing <code>UIViews</code> to start using the Hub Framework, instead, the architecture of the framework is completely protocol oriented, making it easy to add compatibility to existing UI.</p>
 
 <p>To learn more about components, check out the <a href="https://spotify.github.io/HubFramework/component-programming-guide.html">Component programming guide</a>.</p>
-<a href='#content-operations' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='content-operations'>Content Operations</h2>
+<h2 id='content-operations' class='heading'>Content Operations</h2>
 
 <p>To match the highly dynamic component-driven UIs, content operations define what content to render in a declarative fashion. Content can either be defined in code, running locally in the application, or through JSON that is provided by a backend system. This enables you to easily aggregate data from multiple sources, and to change your UI and its content directly from the backend.</p>
 
 <p>Each feature of an application can define its own content operations, and put them together to form a <strong>content loading chain</strong>. Each operation can perform an atomic mutation of the UI state, enabling easy implementation of things like A/B testing or providing system-wide functionality like caching or loading indicators.</p>
 
 <p>To learn more about content operations, check out the <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</p>
-<a href='#background-story' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='background-story'>Background story</h2>
+<h2 id='background-story' class='heading'>Background story</h2>
 
 <p>So, why did we build this? At Spotify, we love to experiment with our UI, to present content in new exciting ways - and to continue to learn what works and what doesn&rsquo;t.</p>
 
@@ -457,25 +509,25 @@
 <p>So, we did what we always do - we started experimenting. The Hub Framework is the result of those experiments. We realized that by building our UIs as <em><q>hubs of content</q></em> using components as building blocks, and by fully decoupling our model code from our UI using content operations - our app became a lot more dynamic and easier to work with. What&rsquo;s more, by letting our backend JSON data contain additional metadata and fully localized strings, we could render responses directly. Instead of having to do lots of custom mapping and transforms in all views.</p>
 
 <p>The result is that we are now free to experiment and try out new UI ideas quicker than ever - all while having a lot less code to maintain. By sharing the Hub Framework with you - the open source community - we hope that more apps and teams can benefit from using this type of architecture.</p>
-<a href='#how-does-spotify-use-this' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how-does-spotify-use-this'>How does Spotify use this?</h2>
+<h2 id='how-does-spotify-use-this' class='heading'>How does Spotify use this?</h2>
 
 <p>This framework is used in production in the Spotify iOS app, which is used by many millions of users every day. We use it to build views like Browse, Running, Party, Genre Pages and more. Important to note is also that we don&rsquo;t keep an internal mirror of this repo - all development on the Hub Framework is done in the open.</p>
-<a href='#compatibility' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='compatibility'>Compatibility</h2>
+<h2 id='compatibility' class='heading'>Compatibility</h2>
 
 <p>The Hub Framework is compatible with <strong>iOS 8 or later</strong>, and can be used from either Objective-C or Swift. In Swift, the API has been annotated to feel Swift-native, with proper nullability and API refinements for Swift 3.</p>
 
 <p>While the framework itself is written entirely in Objective-C, the <a href="https://github.com/spotify/HubFramework/tree/master/demo">demo app</a> is written in Swift 3.</p>
-<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<h2 id='installation' class='heading'>Installation</h2>
 
 <p>You can choose to install the Hub Framework either manually, or through a dependency manager.</p>
-<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='manually'>Manually</h4>
+<h4 id='manually' class='heading'>Manually</h4>
 
 <ul>
 <li>Clone this repo (for example, add it as a submodule).</li>
 <li>Drag the project <code>HubFramework.xcproj</code> into Xcode as a subproject of your app project.</li>
 <li>Link with <code>HubFramework</code> by adding it in <q>Linked Frameworks and Libaries</q>, under the <q>General</q> tab in your app&rsquo;s project settings.</li>
 </ul>
-<a href='#using-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using-cocoapods'>Using CocoaPods</h4>
+<h4 id='using-cocoapods' class='heading'>Using CocoaPods</h4>
 
 <p><em>To use CocoaPods, first make sure you have installed it and updated it to the latest version by following their instructions on <a href="https://cocoapods.org">cocoapods.org</a></em></p>
 
@@ -486,21 +538,21 @@
 <p>Update your pods:</p>
 <pre class="highlight plaintext"><code>$ pod update
 </code></pre>
-<a href='#using-carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='using-carthage'>Using Carthage</h4>
+<h4 id='using-carthage' class='heading'>Using Carthage</h4>
 
 <p><em>To use Carthage, first make sure you have installed it and updated it to the latest version by following their instructions on <a href="https://github.com/Carthage/Carthage">their repo</a></em></p>
 
 <p>First, add <code>HubFramework</code> to your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "spotify/HubFramework"
+<pre class="highlight plaintext"><code>github "spotify/HubFramework" ~&gt; 2.0
 </code></pre>
 
 <p>Then, run Carthage:</p>
 <pre class="highlight plaintext"><code>$ carthage update
 </code></pre>
-<a href='#link-with-code-systemconfiguration-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='link-with-code-systemconfiguration-code'>Link with <code>SystemConfiguration</code></h4>
+<h4 id='link-with-code-systemconfiguration-code' class='heading'>Link with <code>SystemConfiguration</code></h4>
 
 <p>Once you&rsquo;ve installed the Hub Framework, link your app with Apple&rsquo;s <code>SystemConfiguration</code> framework. This is done by adding it in <q>Linked Frameworks and Libaries</q>, under the <q>General</q> tab in your app&rsquo;s project settings. This framework is used to determine the connectivity state of an app using the Hub Framework.</p>
-<a href='#importing-the-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='importing-the-framework'>Importing the framework</h2>
+<h2 id='importing-the-framework' class='heading'>Importing the framework</h2>
 
 <p>In Objective-C:</p>
 <pre class="highlight plaintext"><code>#import &lt;HubFramework/HubFramework.h&gt;
@@ -509,7 +561,7 @@
 <p>In Swift:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">HubFramework</span>
 </code></pre>
-<a href='#getting-started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting-started'>Getting started</h2>
+<h2 id='getting-started' class='heading'>Getting started</h2>
 
 <p>To enable you to quickly get started using the Hub Framework, we&rsquo;ve created a <a href="https://spotify.github.io/HubFramework/setup-guide.html"><strong>setup guide</strong></a> that walks you through how to set it up in an application, as well as a <a href="https://spotify.github.io/HubFramework/getting-started-guide.html"><strong>getting started guide</strong></a> that will give you a step-by-step tutorial to building your first view using it.</p>
 
@@ -522,31 +574,39 @@
 <li><a href="https://spotify.github.io/HubFramework/json-programming-guide.html">JSON programming guide</a></li>
 <li><a href="https://spotify.github.io/HubFramework/action-programming-guide.html">Action programming guide</a></li>
 </ul>
-<a href='#demo-app' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='demo-app'>Demo app</h2>
+<h2 id='hub-framework-sessions' class='heading'>Hub Framework Sessions</h2>
+
+<p>To make it easier for you to learn some of the core concepts of the framework, we&rsquo;ve started creating a series of YouTube videos that each explain one of those concepts. They&rsquo;re called <q>Hub Framework Sessions</q> and can be found here:</p>
+
+<ul>
+<li><a href="https://youtu.be/XbMFPtxk_4Q">Episode 1: Content Loading Chain</a></li>
+<li><a href="https://youtu.be/JpeQhKAen8M">Episode 2: Creating Components</a></li>
+</ul>
+<h2 id='demo-app' class='heading'>Demo app</h2>
 
 <p>To see an example implementation of the Hub Framework, open up the <a href="https://github.com/spotify/HubFramework/tree/master/demo">demo app</a> that has a few different features, showcasing some of the capabilities of the framework.</p>
-<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+<h2 id='documentation' class='heading'>Documentation</h2>
 
 <p>The Hub Framework’s API is well documented and we generate both a <a href="https://spotify.github.io/HubFramework/">documentation website</a> as well as a DocSet for the documentation app <a href="https://kapeli.com/dash">Dash</a>. The documentation is also written in such a way that Xcode will present it on usage.</p>
 
 <p>The Dash documentation is updated automatically for you on any changes to the framework. Get it by subscribing to the <a href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">https://spotify.github.io/HubFramework/docsets/HubFramework.xml</a> feed.</p>
-<a href='#live-editing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='live-editing'>Live editing</h2>
+<h2 id='live-editing' class='heading'>Live editing</h2>
 
 <p>Since the Hub Framework enables UIs to be defined using JSON data, it also enables you to quickly build or prototype UIs using a local JSON file. It includes a command line tool (<code>hublive</code>) that, when run, enables you to see changes you make in that local JSON file rendered live in your application. For more information about how to use live editing, see the <a href="https://spotify.github.io/HubFramework/live-editing-guide.html">Live editing guide</a></p>
-<a href='#xcode-file-templates' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='xcode-file-templates'>Xcode file templates</h2>
+<h2 id='xcode-file-templates' class='heading'>Xcode file templates</h2>
 
 <p>The Hub Framework contains a set of Xcode file templates that make it easy to create the boilerplate for components, content operations, etc.</p>
 
 <p>To install them, simply copy the <code>Hub Framework</code> folder located in <code>templates/xcode</code> to <code>~/Library/Developer/Xcode/Templates/File Templates</code> (You may need to create the last two folders in that path).</p>
-<a href='#help-amp-bug-reporting' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='help-amp-bug-reporting'>Help &amp; Bug Reporting</h2>
+<h2 id='help-amp-bug-reporting' class='heading'>Help &amp; Bug Reporting</h2>
 
 <p>In case you need help or want to report a bug - please <a href="https://github.com/spotify/HubFramework/issues/new">file an issue</a>. Make sure to provide us with as much debuggable information as you can, like iOS version used and any reproduction steps. Sample code also makes it a lot easier for us to help you.</p>
 
 <p>You can also chat with the team behind the Hub Framework directly! The Spotify FOSS community has a <a href="https://slackin.spotify.com/">Slack Group</a> that you can join. Once you&rsquo;ve joined, head over to the <code>hubframework</code> channel to chat with us!</p>
-<a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
+<h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Anyone is more than welcome to contribute to the Hub Framework! Together we can make the framework even more capable, and help each other fix any issues that we might find. However, before you contribute, please read <a href="CONTRIBUTING.md">our contribution guidlines</a>.</p>
-<a href='#authors' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='authors'>Authors</h2>
+<h2 id='authors' class='heading'>Authors</h2>
 
 <p>The Hub Framework was built at <a href="www.spotify.com">Spotify</a> by <a href="https://twitter.com/johnsundell">John Sundell</a>, <a href="https://twitter.com/rastersize">Aron Cedercrantz</a>, <a href="https://github.com/Goos">Robin Goos</a> and <a href="https://github.com/spotify/HubFramework/graphs/contributors">several others</a>.</p>
 
@@ -558,7 +618,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

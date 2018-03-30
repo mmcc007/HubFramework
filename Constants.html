@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -454,6 +502,11 @@
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span> <span class="n">HUBComponentCategoryHeader</span> <span class="o">=</span> <span class="s">@"header"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">header</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -479,6 +532,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span> <span class="n">HUBComponentCategoryRow</span> <span class="o">=</span> <span class="s">@"row"</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">row</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span></code></pre>
 
                         </div>
                       </div>
@@ -508,6 +566,11 @@
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span> <span class="n">HUBComponentCategoryCard</span> <span class="o">=</span> <span class="s">@"card"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">card</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -535,6 +598,11 @@
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span> <span class="n">HUBComponentCategoryCarousel</span> <span class="o">=</span> <span class="s">@"carousel"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">carousel</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -560,6 +628,11 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span> <span class="n">HUBComponentCategoryBanner</span> <span class="o">=</span> <span class="s">@"banner"</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentCategories.h@T@HUBComponentCategory">HUBComponentCategory</a></span></code></pre>
 
                         </div>
                       </div>
@@ -594,6 +667,11 @@
     <span class="s">@"compactWidth"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">compactWidth</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -620,6 +698,11 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span> <span class="n">_Nonnull</span> <span class="n">HUBComponentLayoutTraitFullWidth</span> <span class="o">=</span>
     <span class="s">@"fullWidth"</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">fullWidth</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span></code></pre>
 
                         </div>
                       </div>
@@ -650,6 +733,11 @@
     <span class="s">@"stackable"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">stackable</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -678,6 +766,11 @@
     <span class="s">@"centered"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">centered</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -704,6 +797,11 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">static</span> <span class="k">const</span> <span class="n"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span> <span class="n">_Nonnull</span> <span class="n">HUBComponentLayoutTraitAlwaysStackUpwards</span> <span class="o">=</span>
     <span class="s">@"alwaysStackUpwards"</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">alwaysStackUpwards</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></span></code></pre>
 
                         </div>
                       </div>
@@ -740,6 +838,97 @@
                           <pre class="highlight"><code><span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span><span class="k">const</span> <span class="n">HUBDefaultComponentNamespace</span> <span class="o">=</span> <span class="s">@"default"</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">HUBDefaultComponentNamespace</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Error%20Domain"></a>
+                <a name="//apple_ref/objc/Section/Error Domain" class="dashAnchor"></a>
+                <a href="#/Error%20Domain">
+                  <h3 class="section-name">Error Domain</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@HUBJSONSerializationErrorDomain"></a>
+                    <a name="//apple_ref/objc/Constant/HUBJSONSerializationErrorDomain" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error domain for JSON serialization errors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">NSErrorDomain</span> <span class="n">_Nonnull</span> <span class="n">HUBJSONSerializationErrorDomain</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">HUBJSONSerializationErrorDomain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Error%20Domain2"></a>
+                <a name="//apple_ref/objc/Section/Error Domain" class="dashAnchor"></a>
+                <a href="#/Error%20Domain2">
+                  <h3 class="section-name">Error Domain</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@HUBImageLoaderErrorDomain"></a>
+                    <a name="//apple_ref/objc/Constant/HUBImageLoaderErrorDomain" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error domain for image loading errors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="k">const</span> <span class="n">NSErrorDomain</span> <span class="n">_Nonnull</span> <span class="n">HUBImageLoaderErrorDomain</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">HUBImageLoaderErrorDomain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -753,7 +942,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

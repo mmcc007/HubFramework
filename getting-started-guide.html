@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#getting-started-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='getting-started-guide'>Getting started guide</h1>
+            <h1 id='getting-started-guide' class='heading'>Getting started guide</h1>
 
 <p>Welcome to the Hub Framework getting started guide! This guide aims to help introduce you to the concepts of the framework, and give you a step-by-step guide to building your first dynamic, component-driven view.</p>
 
@@ -447,11 +495,11 @@
 <li><a href="#adding-image-components-through-json">Adding image components through JSON</a></li>
 <li><a href="#the-final-view">The final view</a></li>
 </ul>
-<a href='#setting-up-a-feature' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setting-up-a-feature'>Setting up a feature</h2>
+<h2 id='setting-up-a-feature' class='heading'>Setting up a feature</h2>
 
 <p>The first thing you&rsquo;ll need to do is to setup a feature for your view. A feature is a logical group of views that share the same setup, such as content loading &amp; action handling code.</p>
 
-<p>To setup a feature, you use <code>HUBFeatureRegistry</code>, which is available on the application&rsquo;s <code>HUBManager</code> instance. You call the following API:</p>
+<p>To setup a feature, you use <code><a href="Protocols/HUBFeatureRegistry.html">HUBFeatureRegistry</a></code>, which is available on the application&rsquo;s <code><a href="Classes/HUBManager.html">HUBManager</a></code> instance. You call the following API:</p>
 <pre class="highlight plaintext"><code>[featureRegistry registerFeatureWithIdentifier:@"cities"
                              viewURIPredicate:viewURIPredicate
                                         title:NSLocalizedString(@"Cities", @"Title of the Cities feature")
@@ -466,22 +514,21 @@
 
 <p><strong><code>identifier</code></strong>: The identifier of your feature. This is used internally in the Hub Framework to track the feature, and must be globally unique. It&rsquo;s usually a good idea to keep this human-readable, since it&rsquo;s a good identifier to use for any log messages that you might generate for your feature.</p>
 
-<p><strong><code>viewURIPredicate</code></strong>: A predicate that will be used to determine whether a given view URI belongs to our feature. The Hub Framework uses a URI-based navigation system to go between different views - so we&rsquo;ll create a predicate that matches the view URIs that we want to respond to. In this case, our feature will only contain a single view, with the view URI <code>cities:overview</code>, so we&rsquo;ll create the following view URI predicate to match it:
-<code>objective-c
-NSURL *viewURI = [NSURL URLWithString:@&quot;cities:overview&quot;];
+<p><strong><code>viewURIPredicate</code></strong>: A predicate that will be used to determine whether a given view URI belongs to our feature. The Hub Framework uses a URI-based navigation system to go between different views - so we&rsquo;ll create a predicate that matches the view URIs that we want to respond to. In this case, our feature will only contain a single view, with the view URI <code>cities:overview</code>, so we&rsquo;ll create the following view URI predicate to match it:</p>
+<pre class="highlight plaintext"><code>NSURL *viewURI = [NSURL URLWithString:@"cities:overview"];
 HUBViewURIPredicate *viewURIPredicate = [HUBViewURIPredicate predicateWithViewURI:viewURI];
-</code></p>
+</code></pre>
 
 <p><strong><code>title</code></strong>: A localized title for our feature. We will use this later in our content operation to display a navigation bar, but it can also be used for shared content operations that add content based on the feature title.</p>
 
 <p><strong><code>contentOperationFactories</code></strong>: The factories that will create content operations that build the content of our view. For now, we&rsquo;ll just pass an empty array, since we first have to create our content operation &amp; factory (note that passing an empty array is actually a fatal error, so it&rsquo;s important that we go back and change this after we&rsquo;ve written our content code).</p>
 
 <p>We&rsquo;ll ignore the rest of the parameters for now, since they connect to optional APIs that can be used to further tweak your feature&rsquo;s various behaviors. Let&rsquo;s jump over to creating our content operation.</p>
-<a href='#creating-a-content-operation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-a-content-operation'>Creating a content operation</h2>
+<h2 id='creating-a-content-operation' class='heading'>Creating a content operation</h2>
 
 <p>A content operation takes part in the <em>content loading chain</em> for a view and is responsible for building part of (or all) content of a view. If you haven&rsquo;t already, it&rsquo;s recommended to skim through the <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">content programming guide</a> before you continue, as it will help you get a base understanding of content operations and how they work.</p>
 
-<p>You make a content operation by conforming to the <code>HUBContentOperation</code> protocol in a new class, and implementing the single method that it requires:</p>
+<p>You make a content operation by conforming to the <code><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></code> protocol in a new class, and implementing the single method that it requires:</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesContentOperation : NSObject &lt;HUBContentOperation&gt;
 
 @end
@@ -504,7 +551,7 @@ HUBViewURIPredicate *viewURIPredicate = [HUBViewURIPredicate predicateWithViewUR
 @end
 </code></pre>
 
-<p>Now let&rsquo;s begin building our content - starting with the navigation bar title. In our content operation, we get passed a <code>HUBFeatureInfo</code> object containing information about our feature. We can use this object to obtain the localized title that we passed when setting up our feature, and then assign it as the view&rsquo;s navigation bar title, using the <code>HUBViewModelBuilder</code> that we are also passed. We&rsquo;ll add one line of code to do that to our content operation&rsquo;s perform method:</p>
+<p>Now let&rsquo;s begin building our content - starting with the navigation bar title. In our content operation, we get passed a <code><a href="Protocols/HUBFeatureInfo.html">HUBFeatureInfo</a></code> object containing information about our feature. We can use this object to obtain the localized title that we passed when setting up our feature, and then assign it as the view&rsquo;s navigation bar title, using the <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> that we are also passed. We&rsquo;ll add one line of code to do that to our content operation&rsquo;s perform method:</p>
 <pre class="highlight plaintext"><code>- (void)performForViewURI:(NSURL *)viewURI
               featureInfo:(id&lt;HUBFeatureInfo&gt;)featureInfo
         connectivityState:(HUBConnectivityState)connectivityState
@@ -517,11 +564,11 @@ HUBViewURIPredicate *viewURIPredicate = [HUBViewURIPredicate predicateWithViewUR
 </code></pre>
 
 <p>Let&rsquo;s leave our content operation like this for now, and make a factory that will create instances of it.</p>
-<a href='#creating-a-content-operation-factory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-a-content-operation-factory'>Creating a content operation factory</h2>
+<h2 id='creating-a-content-operation-factory' class='heading'>Creating a content operation factory</h2>
 
 <p>The Hub Framework makes heavy use of the factory pattern throughout most APIs, to avoid that the same object/state gets used in multiple views - which is a very common source of bugs. So for every feature, we&rsquo;ll need a content operation factory that will create the operations that we&rsquo;ll use for every view that will be created for the feature.</p>
 
-<p>To create a content operation factory, we create a new class and conform to <code>HUBContentOperationFactory</code>. Then, when we&rsquo;re asked to create content operations for a given view, we return an instance of the <code>SPTCitiesContentOperation</code> we just created:</p>
+<p>To create a content operation factory, we create a new class and conform to <code><a href="Protocols/HUBContentOperationFactory.html">HUBContentOperationFactory</a></code>. Then, when we&rsquo;re asked to create content operations for a given view, we return an instance of the <code>SPTCitiesContentOperation</code> we just created:</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesContentOperationFactory : NSObject &lt;HUBContentOperationFactory&gt;
 
 @end
@@ -546,7 +593,7 @@ HUBViewURIPredicate *viewURIPredicate = [HUBViewURIPredicate predicateWithViewUR
                                 actionHandler:nil
                   viewControllerScrollHandler:nil];
 </code></pre>
-<a href='#opening-the-view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='opening-the-view'>Opening the view</h2>
+<h2 id='opening-the-view' class='heading'>Opening the view</h2>
 
 <p>You&rsquo;re now ready to open your view for the very first time. Although it will be very empty - it will show your feature&rsquo;s title (<q>Cities</q>) in the navigation bar, and enables you to verify that you&rsquo;ve successfully completed all steps up until now.</p>
 
@@ -561,7 +608,7 @@ HUBViewURIPredicate *viewURIPredicate = [HUBViewURIPredicate predicateWithViewUR
 <span class="n">citiesRowBuilder</span><span class="o">.</span><span class="n">targetBuilder</span><span class="o">.</span><span class="n">uri</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">viewURI</span><span class="p">:</span> <span class="s">"cities:overview"</span><span class="p">)</span>
 </code></pre>
 
-<p>If your app doesn&rsquo;t include an easy way to open any given URI, you can create and push a view controller onto your navigation controller using <code>HUBViewControllerFactory</code>, available on <code>HUBManager</code>:</p>
+<p>If your app doesn&rsquo;t include an easy way to open any given URI, you can create and push a view controller onto your navigation controller using <code><a href="Protocols/HUBViewControllerFactory.html">HUBViewControllerFactory</a></code>, available on <code><a href="Classes/HUBManager.html">HUBManager</a></code>:</p>
 <pre class="highlight plaintext"><code>NSURL *viewURI = [NSURL URLWithString:@"cities:overview"];
 UIViewController *viewController = [viewControllerFactory createViewControllerForViewURI:viewURI];
 [navigationController pushViewController:viewController animated:NO];
@@ -570,20 +617,20 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 <p>You should now be able to see an empty view with the navigation bar title <q>Cities</q>, like this:</p>
 
 <p><img alt="Navigation bar title" src="https://spotify.github.io/HubFramework/resources/getting-started-navbar.png" height="300px"></p>
-<a href='#creating-a-row-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-a-row-component'>Creating a row component</h2>
+<h2 id='creating-a-row-component' class='heading'>Creating a row component</h2>
 
 <p>Let&rsquo;s now jump over to creating the components that we&rsquo;ll be rendering in our UI. As you can see in the image at the top of this guide, we&rsquo;ll be using two different kinds of components - one rendering as a row and one that renders an image.</p>
 
 <p>Let&rsquo;s start with the row one. If you haven&rsquo;t already - it&rsquo;s recommended that you take a look at the <a href="https://spotify.github.io/HubFramework/component-programming-guide.html">component programming guide</a> before continuing, as it will help you gain a basic understanding of how components work.</p>
 
-<p>Components are the visual building blocks of any view that is using the Hub Framework. To define one, you create a new class and conform to the <code>HUBComponent</code> protocol.</p>
+<p>Components are the visual building blocks of any view that is using the Hub Framework. To define one, you create a new class and conform to the <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol.</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesRowComponent : NSObject &lt;HUBComponent&gt;
 
 @end
 </code></pre>
 
-<p>Let&rsquo;s implement the methods in the <code>HUBComponent</code> protocol one by one and walk through what they do.</p>
-<a href='#loading-the-component-39-s-view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='loading-the-component-39-s-view'>Loading the component&rsquo;s view</h3>
+<p>Let&rsquo;s implement the methods in the <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol one by one and walk through what they do.</p>
+<h3 id='loading-the-component-39-s-view' class='heading'>Loading the component&rsquo;s view</h3>
 
 <p>The first two things we&rsquo;ll implement is the <code>loadView</code> method, as well as <code>@synthesizing</code> a backing <code>view</code> property for storing our view.</p>
 <pre class="highlight plaintext"><code>@implementation SPTCitiesRowComponent
@@ -601,8 +648,8 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 
 <p>You&rsquo;re free to use any <code>UIView</code> for rendering a component. Since we want our row to look like standard iOS table view cells, we&rsquo;ll use a <code>UITableViewCell</code> as our view.</p>
 
-<p>As you can see above, we&rsquo;ve taken quite a lot of inspiration from <code>UIViewController</code> when designing how <code>HUBComponent</code> implementations manage their view. Components are basically lightweight view controllers that fills the same role in an MVC triangle between a <code>UIView</code> and a <code>HUBComponentModel</code>.</p>
-<a href='#defining-layout-for-the-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='defining-layout-for-the-component'>Defining layout for the component</h3>
+<p>As you can see above, we&rsquo;ve taken quite a lot of inspiration from <code>UIViewController</code> when designing how <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> implementations manage their view. Components are basically lightweight view controllers that fills the same role in an MVC triangle between a <code>UIView</code> and a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>.</p>
+<h3 id='defining-layout-for-the-component' class='heading'>Defining layout for the component</h3>
 
 <p>Normally, when deciding how a view acts in terms of layout, you&rsquo;d set up Auto Layout constraints or override <code>layoutSubviews</code> in the view&rsquo;s superview. However, in the Hub Framework, we want components to be as reusable as possible - and really decoupled from the context that they&rsquo;re used in. We also want layout to be consistent throughout an application, and minimize the code duplication needed to setup various layouts.</p>
 
@@ -624,20 +671,20 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
     return CGSizeMake(containerViewSize.width, 50);
 }
 </code></pre>
-<a href='#preparing-the-component-39-s-view-for-reuse' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='preparing-the-component-39-s-view-for-reuse'>Preparing the component&rsquo;s view for reuse</h3>
+<h3 id='preparing-the-component-39-s-view-for-reuse' class='heading'>Preparing the component&rsquo;s view for reuse</h3>
 
 <p>To optimize views for maximum performance, both in terms of speed &amp; memory - components are reused just the same way as cells in a <code>UICollectionView</code> or <code>UITableView</code> are reused. In fact, internally the Hub Framework uses a collection view to render all components, so the reuse system is really just a thin layer on top of the standard cell reuse mechanism.</p>
 
-<p>In the <code>prepareViewForReuse</code> method on <code>HUBComponent</code>, you should clear up any state and get your component ready to be reused by another model. For our row component, the implementation is easy - just forward the call to the underlying <code>UITableViewCell</code>:</p>
+<p>In the <code>prepareViewForReuse</code> method on <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code>, you should clear up any state and get your component ready to be reused by another model. For our row component, the implementation is easy - just forward the call to the underlying <code>UITableViewCell</code>:</p>
 <pre class="highlight plaintext"><code>- (void)prepareViewForReuse
 {
     UITableViewCell *cell = self.view;
     [cell prepareForReuse];
 }
 </code></pre>
-<a href='#finally-data-binding' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='finally-data-binding'>Finally, data binding</h3>
+<h3 id='finally-data-binding' class='heading'>Finally, data binding</h3>
 
-<p>The last thing we need to implement before our row component is finished and ready to use - is data binding. We&rsquo;ll be given a <code>HUBComponentModel</code> to bind to our view, and it&rsquo;s up to us to pick and choose what data in the model makes sense for our component. In this case, we&rsquo;ll use the <code>title</code> and <code>subtitle</code> and display them using our table view cell:</p>
+<p>The last thing we need to implement before our row component is finished and ready to use - is data binding. We&rsquo;ll be given a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> to bind to our view, and it&rsquo;s up to us to pick and choose what data in the model makes sense for our component. In this case, we&rsquo;ll use the <code>title</code> and <code>subtitle</code> and display them using our table view cell:</p>
 <pre class="highlight plaintext"><code>- (void)configureViewWithModel:(id&lt;HUBComponentModel&gt;)model
              containerViewSize:(CGSize)containerViewSize
 {
@@ -648,9 +695,9 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 </code></pre>
 
 <p>And with that, we&rsquo;re done! We now have a fully reusable row component that we can not only use in the feature we&rsquo;re building now, but anywhere in our app.</p>
-<a href='#creating-a-component-factory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-a-component-factory'>Creating a component factory</h2>
+<h2 id='creating-a-component-factory' class='heading'>Creating a component factory</h2>
 
-<p>Next, we have to integrate our shiny new component into the Hub Framework. Just like for content operations - we use the factory pattern to create components. Component factories are created by implementing the <code>HUBComponentFactory</code> protocol, and also act as a way to cluster related components together. A component factory is given a <code>name</code> when it&rsquo;s asked to create a component, and can either choose to return a component instance matching that name - or nil if the name was unrecognized.</p>
+<p>Next, we have to integrate our shiny new component into the Hub Framework. Just like for content operations - we use the factory pattern to create components. Component factories are created by implementing the <code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code> protocol, and also act as a way to cluster related components together. A component factory is given a <code>name</code> when it&rsquo;s asked to create a component, and can either choose to return a component instance matching that name - or nil if the name was unrecognized.</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesComponentFactory : NSObject &lt;HUBComponentFactory&gt;
 
 @end
@@ -669,17 +716,17 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 @end
 </code></pre>
 
-<p>Next up, we&rsquo;ll register our new component factory using <code>HUBComponentRegistry</code>. Component factories are registered for a given <code>namespace</code> to avoid clashing with other factories. This enables you to quickly and safely build your own components - even if you&rsquo;re working in a large team with several other developers.</p>
+<p>Next up, we&rsquo;ll register our new component factory using <code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code>. Component factories are registered for a given <code>namespace</code> to avoid clashing with other factories. This enables you to quickly and safely build your own components - even if you&rsquo;re working in a large team with several other developers.</p>
 
-<p><code>HUBComponentRegistry</code> is available on the application&rsquo;s <code>HUBManager</code> instance, and one method call with make your new factory ready to use:</p>
+<p><code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code> is available on the application&rsquo;s <code><a href="Classes/HUBManager.html">HUBManager</a></code> instance, and one method call with make your new factory ready to use:</p>
 <pre class="highlight plaintext"><code>[componentRegistry registerComponentFactory:[SPTCitiesComponentFactory new]
                                forNamespace:@"cities"];
 </code></pre>
 
 <p>We&rsquo;re using the namespace <code>cities</code> here (to match our feature identifier, for convenience - it&rsquo;s not required) - which will make our row component usable through the component identifier <code>cities:row</code>. Let&rsquo;s now start using our new component!</p>
-<a href='#using-your-new-row-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='using-your-new-row-component'>Using your new row component</h2>
+<h2 id='using-your-new-row-component' class='heading'>Using your new row component</h2>
 
-<p>To make the Hub Framework render our new component, we&rsquo;ll jump back into our <em>content operation</em> and build a <code>HUBComponentModel</code> for it. We create component models through <code>HUBComponentModelBuilder</code>, which you can create instances of through the <code>HUBViewModelBuilder</code> that gets passed into your content operation:</p>
+<p>To make the Hub Framework render our new component, we&rsquo;ll jump back into our <em>content operation</em> and build a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> for it. We create component models through <code><a href="Protocols/HUBComponentModelBuilder.html">HUBComponentModelBuilder</a></code>, which you can create instances of through the <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> that gets passed into your content operation:</p>
 <pre class="highlight plaintext"><code>id&lt;HUBComponentModelBuilder&gt; rowBuilder = [viewModelBuilder builderForBodyComponentModelWithIdentifier:@"row-0"];
 </code></pre>
 
@@ -705,7 +752,7 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 <p>To see our new component in action, head back to your view like you did during the <a href="#opening-the-view">Opening the view</a> section, and you should now see something like this:</p>
 
 <p><img alt="City names" src="https://spotify.github.io/HubFramework/resources/getting-started-hello-world.png" height="300px"></p>
-<a href='#adding-multiple-row-components-to-the-view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='adding-multiple-row-components-to-the-view'>Adding multiple row components to the view</h2>
+<h2 id='adding-multiple-row-components-to-the-view' class='heading'>Adding multiple row components to the view</h2>
 
 <p>Everyone enjoys a good <q>Hello world!</q> moment, but it&rsquo;s now time for us to add some real data to our view. Let&rsquo;s add 4 capitals of Europe as our first list of cities. In this example we&rsquo;ll use <em>Madrid</em>, <em>Rome</em>, <em>Berlin</em> and <em>Amsterdam</em> (but you can of course pick other cities if you prefer). For each of those cities, we&rsquo;ll create a row component model with their name as the title and their country as the subtitle. So we&rsquo;ll update our content operation code to look like this:</p>
 <pre class="highlight plaintext"><code>- (void)performForViewURI:(NSURL *)viewURI
@@ -741,13 +788,13 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 <p>If you go back to your view now, you should see this:</p>
 
 <p><img alt="Result" src="https://spotify.github.io/HubFramework/resources/getting-started-cities.png" height="300px"></p>
-<a href='#creating-an-image-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-an-image-component'>Creating an image component</h2>
+<h2 id='creating-an-image-component' class='heading'>Creating an image component</h2>
 
 <p>If you go back to the top and look at the expected end result of this guide, you&rsquo;ll see that we not only have rows, but also a grid of images. So let&rsquo;s go ahead and create the component that we&rsquo;ll use to render those.</p>
 
 <p>The image component will be quite different from the row component, in that it won&rsquo;t render any text, but rather an image that we&rsquo;ll download over the network. Thankfully, the Hub Framework takes care of managing all image downloads for us (as long as it has been setup with an <em>image loader</em>), so we don&rsquo;t have to write any actual networking code in our component.</p>
 
-<p>Let&rsquo;s start by creating basic implementations of the <code>HUBComponent</code> methods, just as we did for the row component above. Only this time we&rsquo;ll use the <code>compactWidth</code> layout trait, and we&rsquo;ll make our image take up only part of the width of the screen.</p>
+<p>Let&rsquo;s start by creating basic implementations of the <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> methods, just as we did for the row component above. Only this time we&rsquo;ll use the <code>compactWidth</code> layout trait, and we&rsquo;ll make our image take up only part of the width of the screen.</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesImageComponent : NSObject &lt;HUBComponent&gt;
 
 @end
@@ -789,9 +836,9 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 
 @end
 </code></pre>
-<a href='#adding-image-handling-support' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='adding-image-handling-support'>Adding image handling support</h3>
+<h3 id='adding-image-handling-support' class='heading'>Adding image handling support</h3>
 
-<p>To make our component able to handle images, we&rsquo;ll conform to an extension of the base <code>HUBComponent</code> protocol - <code>HUBComponentWithImageHandling</code>. So we&rsquo;ll change the <code>@interface</code> for our image component to look like this:</p>
+<p>To make our component able to handle images, we&rsquo;ll conform to an extension of the base <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol - <code><a href="Protocols/HUBComponentWithImageHandling.html">HUBComponentWithImageHandling</a></code>. So we&rsquo;ll change the <code>@interface</code> for our image component to look like this:</p>
 <pre class="highlight plaintext"><code>@interface SPTCitiesImageComponent : NSObject &lt;HUBComponentWithImageHandling&gt;
 
 @end
@@ -818,7 +865,7 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
     imageView.image = image;
 }
 </code></pre>
-<a href='#updating-the-component-factory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='updating-the-component-factory'>Updating the component factory</h3>
+<h3 id='updating-the-component-factory' class='heading'>Updating the component factory</h3>
 
 <p>Now that we&rsquo;ve created our image component, we&rsquo;ll update our component factory to take it into account - using the name <code>image</code>:</p>
 <pre class="highlight plaintext"><code>@implementation SPTCitiesComponentFactory
@@ -838,10 +885,10 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 
 @end
 </code></pre>
-<a href='#adding-image-components-through-json' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='adding-image-components-through-json'>Adding image components through JSON</h2>
+<h2 id='adding-image-components-through-json' class='heading'>Adding image components through JSON</h2>
 
 <p>For the models for our image components, we&rsquo;ll use JSON. We could&rsquo;ve of course just added image content through code, just like we did for the row components - but this is a perfect opportunity to learn about how component models can be added through JSON - as well as <em>content operation chaining</em>.</p>
-<a href='#creating-a-new-content-operation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='creating-a-new-content-operation'>Creating a new content operation</h3>
+<h3 id='creating-a-new-content-operation' class='heading'>Creating a new content operation</h3>
 
 <p>The best practice for content is to separate content loading into multiple content operations when those operations all perform a different task. In this case, we&rsquo;ll have one operation (our <code>SPTCitiesContentOperation</code> from earlier) that adds city names through code, and one (the one we&rsquo;re about to create) that will add image content through JSON.</p>
 
@@ -873,7 +920,7 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 <p>As you can see above, the Hub Framework comes with built-in JSON handling, and can parse JSON data directly for you. The framework ships with a default JSON schema (that we&rsquo;ll use for this guide), but you can also define your own.</p>
 
 <p>To read about how JSON works in the Hub Framework, check out the <a href="https://spotify.github.io/HubFramework/json-programming-guide.html">JSON programming guide</a>, which also includes a reference for the default JSON schema.</p>
-<a href='#creating-the-json-file' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='creating-the-json-file'>Creating the JSON file</h3>
+<h3 id='creating-the-json-file' class='heading'>Creating the JSON file</h3>
 
 <p>Next up, let&rsquo;s add a local JSON file to our app called <code>city-images.json</code> with the following content:</p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -926,8 +973,8 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>The JSON above specifies that we want to add 4 body components that use our new <code>cities:image</code> component, all with a remote background image. Note that the content that we added in our previous <code>SPTCitiesContentOperation</code> won&rsquo;t be overridden, instead both content operations will add component models to the same <code>HUBViewModelBuilder</code>.</p>
-<a href='#updating-the-content-operation-factory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='updating-the-content-operation-factory'>Updating the content operation factory</h3>
+<p>The JSON above specifies that we want to add 4 body components that use our new <code>cities:image</code> component, all with a remote background image. Note that the content that we added in our previous <code>SPTCitiesContentOperation</code> won&rsquo;t be overridden, instead both content operations will add component models to the same <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code>.</p>
+<h3 id='updating-the-content-operation-factory' class='heading'>Updating the content operation factory</h3>
 
 <p>We&rsquo;re now finished with our second content operation, and we&rsquo;re ready to integrate it into our content loading chain. To do that, we&rsquo;ll add it to the array of content operations that our content operation factory returns.</p>
 
@@ -946,7 +993,7 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
 
 @end
 </code></pre>
-<a href='#the-final-view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='the-final-view'>The final view</h2>
+<h2 id='the-final-view' class='heading'>The final view</h2>
 
 <p>With that, we have our final view. Open your view again and you&rsquo;ll now be able to see the final result:</p>
 
@@ -964,7 +1011,7 @@ UIViewController *viewController = [viewControllerFactory createViewControllerFo
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

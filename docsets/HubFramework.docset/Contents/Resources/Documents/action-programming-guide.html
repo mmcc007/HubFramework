@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#action-programming-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='action-programming-guide'>Action Programming Guide</h1>
+            <h1 id='action-programming-guide' class='heading'>Action Programming Guide</h1>
 
 <p>Welcome to the Hub Framework action programming guide! This guide aims to help you gain a deeper understanding of how actions work, how to create them and how you can use them to easily extend the framework with additional functionality.</p>
 
@@ -438,14 +486,14 @@
 <li><a href="#responding-to-an-action-in-a-content-operation">Responding to an action in a content operation</a></li>
 <li><a href="#handling-actions">Handling actions</a></li>
 </ul>
-<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
+<h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>The Hub Framework comes with built-in selection handling for components. Whenever a component is selected, the <code>URI</code> associated with that component&rsquo;s <code>target</code> will be opened, using the standard <code>[UIApplication openURL:]</code> API. However, if you want to customize the selection behavior, or execute other type of actions based on other user interactions - that&rsquo;s when the Action API comes in handy.</p>
 
 <p>The Action API also makes it easy to send events back to your content operations from your components.</p>
-<a href='#creating-an-action' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='creating-an-action'>Creating an action</h2>
+<h2 id='creating-an-action' class='heading'>Creating an action</h2>
 
-<p>Just like components, content operations and the other aspects of the Hub Framework, actions are defined using a protocol - <code>HUBAction</code>. Actions are very simple to implement, all you require is one method:</p>
+<p>Just like components, content operations and the other aspects of the Hub Framework, actions are defined using a protocol - <code><a href="Protocols/HUBAction.html">HUBAction</a></code>. Actions are very simple to implement, all you require is one method:</p>
 <pre class="highlight plaintext"><code>@interface SPTMyHubAction : NSObject &lt;HUBAction&gt;
 
 @end
@@ -462,11 +510,11 @@
 </code></pre>
 
 <p>The contextual object passed to the action contains useful information like what view controller (and for which view URI) the action is being performed, as well as the component &amp; view model that the action should be performed for.</p>
-<a href='#integrating-an-action-with-the-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='integrating-an-action-with-the-framework'>Integrating an action with the framework</h2>
+<h2 id='integrating-an-action-with-the-framework' class='heading'>Integrating an action with the framework</h2>
 
-<p>Before an action can be used, it must be integrated into the Hub Framework. This is done through the <code>HUBActionRegistry</code> API, which works similar to how the <code>HUBComponentRegistry</code> works for components.</p>
+<p>Before an action can be used, it must be integrated into the Hub Framework. This is done through the <code><a href="Protocols/HUBActionRegistry.html">HUBActionRegistry</a></code> API, which works similar to how the <code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code> works for components.</p>
 
-<p>In order to avoid accidentally sharing state between actions, all actions are uniquely created before they are performed, using a factory - an implementation of <code>HUBActionFactory</code>.</p>
+<p>In order to avoid accidentally sharing state between actions, all actions are uniquely created before they are performed, using a factory - an implementation of <code><a href="Protocols/HUBActionFactory.html">HUBActionFactory</a></code>.</p>
 
 <p>So, to integrate your action into the framework, first create a factory class:</p>
 <pre class="highlight plaintext"><code>@interface SPTMyActionFactory : NSObject &lt;HUBActionFactory&gt;
@@ -487,18 +535,18 @@
 @end
 </code></pre>
 
-<p>Then, register your factory with the action registry (available on <code>HUBManager</code>):</p>
+<p>Then, register your factory with the action registry (available on <code><a href="Classes/HUBManager.html">HUBManager</a></code>):</p>
 <pre class="highlight plaintext"><code>id&lt;HUBActionFactory&gt; factory = [SPTMyActionFactory new];
 [actionRegistry registerActionFactory:factory forNamespace:@"myNamespace"];
 </code></pre>
 
 <p>The <code>namespace</code> used when registering the factory are used to match actions when performed - just like the way components are matched.</p>
-<a href='#triggering-an-action' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='triggering-an-action'>Triggering an action</h2>
-<a href='#triggering-an-action-from-a-component-model' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='triggering-an-action-from-a-component-model'>Triggering an action from a component model</h3>
+<h2 id='triggering-an-action' class='heading'>Triggering an action</h2>
+<h3 id='triggering-an-action-from-a-component-model' class='heading'>Triggering an action from a component model</h3>
 
-<p>Actions that are associated with a <code>HUBComponentModel</code> will automatically be triggered when a component rendering that model was selected by the user.</p>
+<p>Actions that are associated with a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> will automatically be triggered when a component rendering that model was selected by the user.</p>
 
-<p>To add actions to a component model, you add a <code>HUBIdentifier</code> matching your action&rsquo;s <code>name</code> and <code>namespace</code> (that your factory was registered for) either using code in a content operation:</p>
+<p>To add actions to a component model, you add a <code><a href="Classes/HUBIdentifier.html">HUBIdentifier</a></code> matching your action&rsquo;s <code>name</code> and <code>namespace</code> (that your factory was registered for) either using code in a content operation:</p>
 <pre class="highlight plaintext"><code>id&lt;HUBComponentModelBuilder&gt; componentModelBuilder = [viewModelBuilder builderForBodyComponentModelWithIdentifier:@"myComponent"];
 [componentModelBuilder.targetBuilder addActionWithNamespace:@"myNamespace"
                                                        name:@"myAction"];
@@ -512,24 +560,24 @@
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<a href='#triggering-an-action-from-a-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='triggering-an-action-from-a-component'>Triggering an action from a component</h3>
+<h3 id='triggering-an-action-from-a-component' class='heading'>Triggering an action from a component</h3>
 
 <p>You can also have a component implementation manually trigger an action. This can be done at any point in time, for example in response to a custom user interaction (such as a swipe), or some other event.</p>
 
-<p>To make a component able to perform actions, make it conform to the <code>HUBComponentActionPerformer</code> protocol. This gives you an <code>actionDelegate</code> that you can call to perform an action for a given identifier (which will be resolved exactly the same way as when action identifiers are attached to a <code>HUBComponentModel</code>). You also have the option of passing any <code>customData</code> that you can then pick up in the action or in a content operation.</p>
+<p>To make a component able to perform actions, make it conform to the <code><a href="Protocols/HUBComponentActionPerformer.html">HUBComponentActionPerformer</a></code> protocol. This gives you an <code>actionDelegate</code> that you can call to perform an action for a given identifier (which will be resolved exactly the same way as when action identifiers are attached to a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>). You also have the option of passing any <code>customData</code> that you can then pick up in the action or in a content operation.</p>
 
 <p>Here&rsquo;s an example where we perform an action in response to a <code>UIGestureRecognizer</code> being triggered:</p>
 <pre class="highlight plaintext"><code>- (void)handleGestureRecognizer:(UIGestureRecognizer *)recognizer
 {
     HUBIdentifier *actionIdentifier = [[HUBIdentifier alloc] initWithNamespace:@"myFeature" name:@"myAction"];
-    [self.actionDelegate component:self performActionWithIdentifier:actionIdentifier customData:nil];
+    [self.actionPerformer performActionWithIdentifier:actionIdentifier customData:nil];
 }
 </code></pre>
-<a href='#responding-to-an-action-in-a-content-operation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='responding-to-an-action-in-a-content-operation'>Responding to an action in a content operation</h2>
+<h2 id='responding-to-an-action-in-a-content-operation' class='heading'>Responding to an action in a content operation</h2>
 
 <p>As mentioned in the introduction, one thing you can use actions for, is to be able to easily communicate with a content operation from a component. For example, you might want to reschedule an operation based on user interaction, or modify your underlying data.</p>
 
-<p>To observe actions performed in the view that a content operation is serving, conform to the <code>HUBContentOperationActionObserver</code> protocol in your content operation.</p>
+<p>To observe actions performed in the view that a content operation is serving, conform to the <code><a href="Protocols/HUBContentOperationActionObserver.html">HUBContentOperationActionObserver</a></code> protocol in your content operation.</p>
 
 <p>In the example below, we are rendering a list of songs based on a <code>SPTSongContentOperation</code>. We then implement a delete button in one of our components, which will trigger an action to delete the song associated with that component from our data source, and then reschedule our content operation to re-render our view (with the component deleted).</p>
 
@@ -539,7 +587,7 @@
 - (void)handleDeleteButtonTapped
 {
     HUBIdentifier *actionIdentifier = [[HUBIdentifier alloc] initWithNamespace:@"delete" name:@"song"];
-    [self.actionDelegate component:self performActionWithIdentifier:actionIdentifier];
+    [self.actionPerformer performActionWithIdentifier:actionIdentifier customData:nil];
 }
 
 @end
@@ -576,11 +624,11 @@
 </code></pre>
 
 <p>The result of the above is that every time a delete button is pressed, the component for that song is deleted from the view.</p>
-<a href='#handling-actions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='handling-actions'>Handling actions</h2>
+<h2 id='handling-actions' class='heading'>Handling actions</h2>
 
-<p>You can also opt to handle certain actions on a feature level. When you set up your feature with the Hub Framework, you can pass an <code>actionHandler</code> (an implementation of the <code>HUBActionHandler</code> protocol), that gets called each time an action is about to be performed. The action handler can then choose to handle the action itself, rather than letting the action being performed.</p>
+<p>You can also opt to handle certain actions on a feature level. When you set up your feature with the Hub Framework, you can pass an <code>actionHandler</code> (an implementation of the <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code> protocol), that gets called each time an action is about to be performed. The action handler can then choose to handle the action itself, rather than letting the action being performed.</p>
 
-<p>Let&rsquo;s take the <q>delete a song</q> example from just before, and add some <q>protected songs</q> that are not deletable. That is, when the <code>SPTDeleteSongAction</code> is about to be performed, we check if the song is protected, and if it is - we veto the action, preventing it from being performed. Let&rsquo;s implement <code>HUBActionHandler</code>:</p>
+<p>Let&rsquo;s take the <q>delete a song</q> example from just before, and add some <q>protected songs</q> that are not deletable. That is, when the <code>SPTDeleteSongAction</code> is about to be performed, we check if the song is protected, and if it is - we veto the action, preventing it from being performed. Let&rsquo;s implement <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code>:</p>
 <pre class="highlight plaintext"><code>@implementation SPTMyActionHandler
 
 - (BOOL)handleActionWithContext:(id&lt;HUBActionContext&gt;)context
@@ -599,7 +647,7 @@
 
 <p>By returning <code>YES</code> above, we tell the Hub Framework that we&rsquo;ve handled the action in our action handler, which means that the action won&rsquo;t be performed.</p>
 
-<p>A global action handler can also be added when setting up <code>HUBManager</code>, that will be used for all features that do not implement their own. For more information about setting up Hub Manager, see the <a href="https://spotify.github.io/HubFramework/setup-guide.html">setup guide</a>.</p>
+<p>A global action handler can also be added when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code>, that will be used for all features that do not implement their own. For more information about setting up Hub Manager, see the <a href="https://spotify.github.io/HubFramework/setup-guide.html">setup guide</a>.</p>
 
           </div>
         </section>
@@ -609,7 +657,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

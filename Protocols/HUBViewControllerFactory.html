@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -20,18 +23,24 @@
         <a class="header-link" href="../index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="../img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="../img/dash.png"/>
             Install in Dash
           </a>
@@ -52,6 +61,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../component-programming-guide.html">Component programming guide</a>
@@ -92,13 +104,37 @@
                 <a class="nav-group-task-link" href="../Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -141,10 +177,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -163,6 +205,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -425,7 +473,7 @@
             <h1>HUBViewControllerFactory</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerFactory</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">HUBViewControllerFactory</span></code></pre>
 
                 </div>
               </div>
@@ -469,6 +517,11 @@
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">canCreateViewControllerForViewURI</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewURI</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">canCreateViewController</span><span class="p">(</span><span class="n">forViewURI</span> <span class="nv">viewURI</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -483,7 +536,6 @@
                               <td>
                                 <div>
                                   <p>The view URI to check if a view controller can be created for</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -520,6 +572,11 @@
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewURI</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createViewController</span><span class="p">(</span><span class="n">forViewURI</span> <span class="nv">viewURI</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/HUBViewController.html">HUBViewController</a></span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -534,8 +591,7 @@
                               <td>
                                 <div>
                                   <p>The view URI to create a view controller for. The URI should match a feature that
-        was previously registered with <code>HUBFeatureRegistry</code>.</p>
-
+     was previously registered with <code><a href="../Protocols/HUBFeatureRegistry.html">HUBFeatureRegistry</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -545,10 +601,9 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>A Hub Framework-powered view controller used for rendering content provided by a feature’s
- content operations, using a User Interface consisting of <code><a href="../Protocols/HUBComponent.html">HUBComponent</a></code> views. If a view controller
- could not be created for the supplied viewURI (because a feature registration could not be resolved
- for it), this method returns <code>nil</code>.</p>
-
+content operations, using a User Interface consisting of <code><a href="../Protocols/HUBComponent.html">HUBComponent</a></code> views. If a view controller
+could not be created for the supplied viewURI (because a feature registration could not be resolved
+for it), this method returns <code>nil</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -582,6 +637,11 @@
                              <span class="nf">featureTitle</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">featureTitle</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createViewController</span><span class="p">(</span><span class="n">withContentOperations</span> <span class="nv">contentOperations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="p">],</span> <span class="nv">featureTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/HUBViewController.html">HUBViewController</a></span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -596,7 +656,6 @@
                               <td>
                                 <div>
                                   <p>The content operations to use to load the content for the view controller.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -609,8 +668,7 @@
                               <td>
                                 <div>
                                   <p>The title of the feature that the view controller will belong to. Used for its
-        default title, and also made available to content operations as part of <code>HUBFeatureInfo</code>.</p>
-
+     default title, and also made available to content operations as part of <code><a href="../Protocols/HUBFeatureInfo.html">HUBFeatureInfo</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -648,6 +706,11 @@
                   <span class="nf">featureTitle</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">featureTitle</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createViewController</span><span class="p">(</span><span class="n">forViewURI</span> <span class="nv">viewURI</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">contentOperations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/HUBContentOperation.html">HUBContentOperation</a></span><span class="p">],</span> <span class="nv">featureIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">featureTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/HUBViewController.html">HUBViewController</a></span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -662,8 +725,7 @@
                               <td>
                                 <div>
                                   <p>The URI of the view controller to create. This view URI will not be looked up in the
-        Hub Framework&rsquo;s feature registry, it will simply be assigned to the view controller.</p>
-
+     Hub Framework&rsquo;s feature registry, it will simply be assigned to the view controller.</p>
                                 </div>
                               </td>
                             </tr>
@@ -676,7 +738,6 @@
                               <td>
                                 <div>
                                   <p>The content operations to use to load the content for the view controller.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -689,8 +750,7 @@
                               <td>
                                 <div>
                                   <p>The identifier of the feature that the view controller will belong to. Will
-        be made available to content operations as part of <code>HUBFeatureInfo</code>.</p>
-
+     be made available to content operations as part of <code><a href="../Protocols/HUBFeatureInfo.html">HUBFeatureInfo</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -703,8 +763,7 @@
                               <td>
                                 <div>
                                   <p>The title of the feature that the view controller will belong to. Used for its
-        default title, and also made available to contnet operations as part of <code>HUBFeatureInfo</code>.</p>
-
+     default title, and also made available to contnet operations as part of <code><a href="../Protocols/HUBFeatureInfo.html">HUBFeatureInfo</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -723,7 +782,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

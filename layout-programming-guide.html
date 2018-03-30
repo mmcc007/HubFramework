@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#layout-programming-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='layout-programming-guide'>Layout Programming Guide</h1>
+            <h1 id='layout-programming-guide' class='heading'>Layout Programming Guide</h1>
 
 <p>Welcome to the Hub Framework layout programming guide! This guide aims to help you gain a deeper understanding of how the Hub Framework works in terms of layout.</p>
 
@@ -433,25 +481,28 @@
 <li><a href="#layout-traits">Layout traits</a></li>
 <li><a href="#layout-manager">Layout manager</a></li>
 </ul>
-<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
+<h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>In order to both support quick iteration &amp; development of components &amp; content, and also be able to ensure consistent layout behavior throughout an application, The Hub Framework uses a centralized layout system - that has information fed into it by components.</p>
 
 <p>There are two key parts to the Hub Framework layout system; <strong>Layout traits</strong> and a <strong>Layout manager</strong>. Those two parts are then used together with <code>UICollectionView</code>, and a custom <code>UICollectionViewLayout</code>.</p>
-<a href='#layout-traits' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='layout-traits'>Layout traits</h2>
+<h2 id='layout-traits' class='heading'>Layout traits</h2>
 
-<p>Each <code>HUBComponent</code> has the ability to declare a set of layout traits. These traits don&rsquo;t contain information about absolute margins or padding, but rather informs the framework&rsquo;s layout manager how to compute metrics.</p>
+<p>Each <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> has the ability to declare a set of layout traits. These traits don&rsquo;t contain information about absolute margins or padding, but rather informs the framework&rsquo;s layout manager how to compute metrics.</p>
 
-<p>The Hub Framework ships with a standard library of layout traits, but more can easily be added by applications using the framework (by declaring a new <code>HUBComponentLayoutTrait</code> constant). It&rsquo;s recommended to keep layout traits global in an application, to be able to create clearly defined rules around layout.</p>
+<p>The Hub Framework ships with a standard library of layout traits, but more can easily be added by applications using the framework (by declaring a new <code><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></code> constant). It&rsquo;s recommended to keep layout traits global in an application, to be able to create clearly defined rules around layout.</p>
+<pre class="highlight plaintext"><code>// extend HUBComponentLayoutTrait with a custom trait
+static HUBComponentLayoutTrait const HUBComponentLayoutTraitLeftMarginOnly = @"leftMarginOnly";
+</code></pre>
 
-<p>An example of a layout trait is <code>HUBComponentLayoutTraitCompactWidth</code>, which is used for components that should have horizontal margin on each side (and not stretch the entire view). The opposite of this trait is <code>HUBComponentLayoutTraitFullWidth</code>, which tells the layout manager that no horizontal margin should be added.</p>
+<p>An example of a layout trait is <code><a href="Constants.html#/c:HUBComponentLayoutTraits.h@HUBComponentLayoutTraitCompactWidth">HUBComponentLayoutTraitCompactWidth</a></code>, which is used for components that should have horizontal margin on each side (and not stretch the entire view). The opposite of this trait is <code><a href="Constants.html#/c:HUBComponentLayoutTraits.h@HUBComponentLayoutTraitFullWidth">HUBComponentLayoutTraitFullWidth</a></code>, which tells the layout manager that no horizontal margin should be added.</p>
 
 <p>So layout traits are a way do describe layout, rather than specifying hard rules or metrics. The advantage of this approach is that components can be completely unaware of each other, while still being laid out in a predictable way.</p>
-<a href='#layout-manager' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='layout-manager'>Layout manager</h2>
+<h2 id='layout-manager' class='heading'>Layout manager</h2>
 
-<p>The other key part of the Hub Framework layout system, is <code>HUBComponentLayoutManager</code>. Each instance of the framework has a single layout manager, that does all the computation of margins for components. To be able to make an informed decision, the layout manager is given access to the layout traits for the component(s) that it&rsquo;s computing margins for.</p>
+<p>The other key part of the Hub Framework layout system, is <code><a href="Protocols/HUBComponentLayoutManager.html">HUBComponentLayoutManager</a></code>. Each instance of the framework has a single layout manager, that does all the computation of margins for components. To be able to make an informed decision, the layout manager is given access to the layout traits for the component(s) that it&rsquo;s computing margins for.</p>
 
-<p>Let&rsquo;s make a simple implementation of <code>HUBComponentLayoutManager</code>, that uses a <code>15 point</code> vertical margin for all components (except for those with the <code>HUBComponentLayoutTraitStackable</code> trait) and a <code>20 point</code> horizontal margin (except for components with the <code>HUBComponentLayoutTraitFullWidth</code> trait):</p>
+<p>Let&rsquo;s make a simple implementation of <code><a href="Protocols/HUBComponentLayoutManager.html">HUBComponentLayoutManager</a></code>, that uses a <code>15 point</code> vertical margin for all components (except for those with the <code><a href="Constants.html#/c:HUBComponentLayoutTraits.h@HUBComponentLayoutTraitStackable">HUBComponentLayoutTraitStackable</a></code> trait) and a <code>20 point</code> horizontal margin (except for components with the <code><a href="Constants.html#/c:HUBComponentLayoutTraits.h@HUBComponentLayoutTraitFullWidth">HUBComponentLayoutTraitFullWidth</a></code> trait):</p>
 <pre class="highlight plaintext"><code>@implementation LayoutManager
 
 - (CGFloat)marginBetweenComponentWithLayoutTraits:(NSSet&lt;HUBComponentLayoutTrait *&gt; *)layoutTraits
@@ -516,7 +567,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

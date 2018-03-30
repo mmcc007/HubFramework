@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#live-editing-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='live-editing-guide'>Live Editing Guide</h1>
+            <h1 id='live-editing-guide' class='heading'>Live Editing Guide</h1>
 
 <p>Welcome to the Hub Framework live editing guide! This guides aims to help you get setup with the framework&rsquo;s live editing capabilities - which can be used for rapid prototyping without needing to recompile any code.</p>
 
@@ -433,24 +481,24 @@
 <li><a href="#enabling-live-editing-in-your-app">Enabling live editing in your app</a></li>
 <li><a href="#running-hublive">Running <code>hublive</code></a></li>
 </ul>
-<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
+<h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>We built live editing into the Hub Framework to enable developers, designers and other people involved in creating new UIs to more quickly be able to prototype new concepts and try out new ideas. Using the <code>hublive</code> command line tool, together with your favorite text editor, you can easily create new UIs using JSON, without needing to write or compile any code.</p>
-<a href='#enabling-live-editing-in-your-app' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='enabling-live-editing-in-your-app'>Enabling live editing in your app</h2>
+<h2 id='enabling-live-editing-in-your-app' class='heading'>Enabling live editing in your app</h2>
 
 <p>Live editing is opt-in, so you&rsquo;ll need to set it up in your application before you can start using it. In the <a href="https://github.com/spotify/HubFramework/tree/master/demo">demo app</a> that the Hub Framework comes with, live editing is already set up (as long as the app is compiled for <code>DEBUG</code>). Enabling live editing is easy, and involves three simple steps:</p>
 
-<p><strong>Start <code>HUBLiveService</code></strong></p>
+<p><strong>Start <code><a href="Protocols/HUBLiveService.html">HUBLiveService</a></code></strong></p>
 
-<p>The application that you wish to live edit in needs to start the Hub Framework live service through the <code>HUBLiveService</code> API. This is done with a single method call:</p>
+<p>The application that you wish to live edit in needs to start the Hub Framework live service through the <code><a href="Protocols/HUBLiveService.html">HUBLiveService</a></code> API. This is done with a single method call:</p>
 <pre class="highlight plaintext"><code>[hubManager.liveService startOnPort:7777];
 </code></pre>
 
 <p>Once called, the live service will start accepting connections on the given port, which enables the <code>hublive</code> command line tool to connect to it.</p>
 
-<p><strong>Implement <code>HUBLiveServiceDelegate</code></strong></p>
+<p><strong>Implement <code><a href="Protocols/HUBLiveServiceDelegate.html">HUBLiveServiceDelegate</a></code></strong></p>
 
-<p>To get notified whenever the live service has created a view controller for live editing, you need to assign an object to be its delegate, by conforming to <code>HUBLiveServiceDelegate</code>.</p>
+<p>To get notified whenever the live service has created a view controller for live editing, you need to assign an object to be its delegate, by conforming to <code><a href="Protocols/HUBLiveServiceDelegate.html">HUBLiveServiceDelegate</a></code>.</p>
 
 <p><strong>Push any created live editing view controllers onto your application&rsquo;s navigation stack</strong></p>
 
@@ -463,11 +511,11 @@
 </code></pre>
 
 <p>That&rsquo;s it - your app is now ready to be live edited!</p>
-<a href='#running-code-hublive-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='running-code-hublive-code'>Running <code>hublive</code></h2>
+<h2 id='running-code-hublive-code' class='heading'>Running <code>hublive</code></h2>
 
 <p>Once your app has been setup for live editing, run the <code>hublive</code> command line tool to begin. You can build the tool using the <code>HubFrameworkLive</code> Xcode project (located in the <code>/live</code> folder in the repository). You can either run <code>hublive</code> directly from Xcode, or archive it and put the built product somewhere accessible from your command line (such as <code>/usr/local/bin</code>).</p>
 
-<p>When running <code>hublive</code>, you can give it either 1 or 2 arguments. The first argument is a path to a JSON file that you wish to use for live editing. The second (optional) parameter is the port number that you wish to use to connect to your application (defaults to <code>7777</code>, and should match the port you gave when setting up <code>HUBLiveService</code>). You can supply the arguments either on the command line (when running <code>hublive</code> there), or through Xcode (by adding the arguments to the <code>HubFrameworkLive</code> scheme).</p>
+<p>When running <code>hublive</code>, you can give it either 1 or 2 arguments. The first argument is a path to a JSON file that you wish to use for live editing. The second (optional) parameter is the port number that you wish to use to connect to your application (defaults to <code>7777</code>, and should match the port you gave when setting up <code><a href="Protocols/HUBLiveService.html">HUBLiveService</a></code>). You can supply the arguments either on the command line (when running <code>hublive</code> there), or through Xcode (by adding the arguments to the <code>HubFrameworkLive</code> scheme).</p>
 
 <p>Here&rsquo;s an example where we start live editing a file using a custom port:</p>
 <pre class="highlight plaintext"><code>$ hublive ~/desktop/live.json 8765
@@ -487,7 +535,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

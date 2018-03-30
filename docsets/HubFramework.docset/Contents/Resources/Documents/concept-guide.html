@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#hub-framework-concept-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='hub-framework-concept-guide'>Hub Framework concept guide</h1>
+            <h1 id='hub-framework-concept-guide' class='heading'>Hub Framework concept guide</h1>
 
 <p>Welcome to the Hub Framework concept guide! This guide aims to give you an easy to navigate, alphabetical reference that explains all the key concepts of the framework. It also contains links to other guides and code that will give you more in-depth knowledge about the various concepts and how they relate.</p>
 
@@ -445,33 +493,33 @@
 <li><a href="#registry">Registry</a></li>
 <li><a href="#view-model">View model</a></li>
 </ul>
-<a href='#action' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='action'>Action</h2>
+<h2 id='action' class='heading'>Action</h2>
 
-<p>An object implementing <code>HUBAction</code> - which can be used to define custom behavior for components &amp; content operations. Actions can be both observed and triggered by content operations &amp; components, meaning that they can be used to bridge the gap between content operations and components.</p>
+<p>An object implementing <code><a href="Protocols/HUBAction.html">HUBAction</a></code> - which can be used to define custom behavior for components &amp; content operations. Actions can be both observed and triggered by content operations &amp; components, meaning that they can be used to bridge the gap between content operations and components.</p>
 
-<p>Actions are integrated with the Hub Framework through a <a href="#factory">factory</a> (<code>HUBActionFactory</code>) that is registered using <code>HUBActionRegistry</code>.</p>
+<p>Actions are integrated with the Hub Framework through a <a href="#factory">factory</a> (<code><a href="Protocols/HUBActionFactory.html">HUBActionFactory</a></code>) that is registered using <code><a href="Protocols/HUBActionRegistry.html">HUBActionRegistry</a></code>.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBAction</code> protocol.</li>
-<li>The <code>HUBActionFactory</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBAction.html">HUBAction</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBActionFactory.html">HUBActionFactory</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/action-programming-guide.html">Action programming guide</a>.</li>
 </ul>
-<a href='#action-handler' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='action-handler'>Action handler</h2>
+<h2 id='action-handler' class='heading'>Action handler</h2>
 
-<p>An object that handles actions, either on a global or feature level. Action handlers are defined using <code>HUBActionHandler</code> and can be supplied either when setting up <code>HUBManager</code> (as <code>defaultActionHandler</code>) or when setting up a feature (as <code>actionHandler</code>).</p>
+<p>An object that handles actions, either on a global or feature level. Action handlers are defined using <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code> and can be supplied either when setting up <code><a href="Classes/HUBManager.html">HUBManager</a></code> (as <code>defaultActionHandler</code>) or when setting up a feature (as <code>actionHandler</code>).</p>
 
 <p>An action handler is called each time an action is about to be performed in a view, and can chose to handle that action itself, or simply returning <code>NO</code> to let the action take place.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBAction</code> protocol.</li>
-<li>The <code>HUBActionHandler</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBAction.html">HUBAction</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBActionHandler.html">HUBActionHandler</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/action-programming-guide.html">Action programming guide</a>.</li>
 </ul>
-<a href='#backend-driven-uis' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='backend-driven-uis'>Backend-driven UIs</h2>
+<h2 id='backend-driven-uis' class='heading'>Backend-driven UIs</h2>
 
 <p>A phrase used to describe UIs that are essentially controlled by a backend service. While most apps these days have their content provided by some form of backend, UIs that are considered <q>backend-driven</q> also have their structure &amp; layout driven from the backend.</p>
 
@@ -484,7 +532,7 @@
 <li>The <a href="https://spotify.github.io/HubFramework/json-programming-guide.html">JSON programming guide</a>.</li>
 <li>The talk <a href="https://atscaleconference.com/videos/backend-driven-native-uis/"><q>Backend-driven UIs</q></a> from Mobile@Scale London 2016.</li>
 </ul>
-<a href='#builder' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='builder'>Builder</h2>
+<h2 id='builder' class='heading'>Builder</h2>
 
 <p>An object that is responsible for constructing a model. Builders are used in <a href="#content-operation">content operations</a> to declare content (like components, images, targets, etc). They act like a mutable counterpart to the model that they build - with the key difference that they&rsquo;re not related by inheritance. Each model in the Hub Framework has a builder associated with it.</p>
 
@@ -493,72 +541,72 @@
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBViewModelBuilder</code> protocol.</li>
-<li>The <code>HUBComponentModelBuilder</code> protocol.</li>
-<li>The <code>HUBComponentImageDataBuilder</code> protocol.</li>
-<li>The <code>HUBComponentTargetBuilder</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentModelBuilder.html">HUBComponentModelBuilder</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentImageDataBuilder.html">HUBComponentImageDataBuilder</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentTargetBuilder.html">HUBComponentTargetBuilder</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</li>
 </ul>
-<a href='#component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='component'>Component</h2>
+<h2 id='component' class='heading'>Component</h2>
 
-<p>An object that manages a view that is rendered in a <code>HUBViewController</code>. Components are defined using <code>HUBComponent</code> (or related protocols) and are registered with the Hub Framework using a <a href="#factory">factory</a> (<code>HUBComponentFactory</code>) through <code>HUBComponentRegistry</code>. A component is the controller between a <a href="#component-model">component model</a> and a <code>UIView</code>. All views that are rendered in a <code>HUBViewController</code> are components.</p>
+<p>An object that manages a view that is rendered in a <code><a href="Classes/HUBViewController.html">HUBViewController</a></code>. Components are defined using <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> (or related protocols) and are registered with the Hub Framework using a <a href="#factory">factory</a> (<code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code>) through <code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code>. A component is the controller between a <a href="#component-model">component model</a> and a <code>UIView</code>. All views that are rendered in a <code><a href="Classes/HUBViewController.html">HUBViewController</a></code> are components.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBComponent</code> protocol.</li>
-<li>The <code>HUBComponentFactory</code> protocol.</li>
-<li>The <code>HUBComponentModel</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/component-programming-guide.html">Component programming guide</a>.</li>
 </ul>
-<a href='#component-driven-uis' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='component-driven-uis'>Component-driven UIs</h2>
+<h2 id='component-driven-uis' class='heading'>Component-driven UIs</h2>
 
 <p>A phrase used to describe UIs that consists entirely of components. Instead of creating hard-wired layout relationships between subviews, components are fully decoupled, atomic pieces of a UI. In the Hub Framework, a <a href="#component">component</a> in a thin wrapper around a <code>UIView</code>, that enables existing views to be easily imported into the framework.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBComponent</code> protocol.</li>
-<li>The <code>HUBComponentModel</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/component-programming-guide.html">Component programming guide</a>.</li>
 <li>The talk <a href="https://vimeo.com/190713343"><q>Building component-driven UIs</q></a> from MobileEra 2016.</li>
 </ul>
-<a href='#component-model' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='component-model'>Component model</h2>
+<h2 id='component-model' class='heading'>Component model</h2>
 
 <p>A model that is used to render a component. Component models are created using <a href="#builder">builders</a> in <a href="#content-operation">content operations</a> and are generic representations of data, for rendering purposes. Each component model has a <a href="#component-identifier">component identifier</a> associated with it, which is used to resolve which component instance that will render it. It also contains properties like <code>title</code>, <code>subtitle</code>, <code>mainImage</code>, <code>target</code>, etc. that a component can be used to populate its view.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBComponentModel</code> protocol.</li>
-<li>The <code>HUBComponent</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/component-programming-guide.html">Component programming guide</a>.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</li>
 </ul>
-<a href='#content-loading-chain' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='content-loading-chain'>Content loading chain</h2>
+<h2 id='content-loading-chain' class='heading'>Content loading chain</h2>
 
-<p>An array of <a href="#content-operation">content operations</a> that are chained together to load the content for a view. A chain is automatically formed when a <code>HUBViewController</code> (or <code>HUBViewModelLoader</code>) is created with multiple content operations. In a chain, each operation is called sequentially, and its output state is transferred (by copying) to the next operation.</p>
+<p>An array of <a href="#content-operation">content operations</a> that are chained together to load the content for a view. A chain is automatically formed when a <code><a href="Classes/HUBViewController.html">HUBViewController</a></code> (or <code><a href="Protocols/HUBViewModelLoader.html">HUBViewModelLoader</a></code>) is created with multiple content operations. In a chain, each operation is called sequentially, and its output state is transferred (by copying) to the next operation.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBContentOperation</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</li>
 </ul>
-<a href='#content-operation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='content-operation'>Content operation</h2>
+<h2 id='content-operation' class='heading'>Content operation</h2>
 
 <p>An operation that is resposible for loading the content for a view. A single content operation can be resonsible for the entire content, or multiple ones can be chained together (to form a <a href="#content-loading-chain">content loading chain</a>), each performing a specific mutation of the view&rsquo;s content.</p>
 
-<p>Content operations use a view model <a href="#builder">builder</a> (<code>HUBViewModelBuilder</code>) to add, remove or change component models for a view. How they execute, and whether they load remote JSON or use local content is up to you. They are defined using the <code>HUBContentOperation</code> protocol (and optionally, sub-protocols).</p>
+<p>Content operations use a view model <a href="#builder">builder</a> (<code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code>) to add, remove or change component models for a view. How they execute, and whether they load remote JSON or use local content is up to you. They are defined using the <code><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></code> protocol (and optionally, sub-protocols).</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBContentOperation</code> protocol.</li>
-<li>The <code>HUBViewModelBuilder</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBContentOperation.html">HUBContentOperation</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</li>
 </ul>
-<a href='#factory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='factory'>Factory</h2>
+<h2 id='factory' class='heading'>Factory</h2>
 
 <p>An object that is responsible for creating implementations of a certain protocol. The <a href="https://en.wikipedia.org/wiki/Factory_method_pattern">factory pattern</a> is used extensively throughout the Hub Framework to avoid shared state. By always creating unique object instances for each context - no state is ever shared. While this requires a bit more code to be written (you have to write both an implementation <strong>and a factory</strong>, for example for <a href="#component">components</a>), it makes the framework a lot more predictable and less error prone.</p>
 
@@ -566,57 +614,57 @@
 
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Factory_method_pattern"><q>Factory method pattern</q> on Wikipedia</a>.</li>
-<li>The <code>HUBComponentFactory</code> protocol.</li>
-<li>The <code>HUBActionFactory</code> protocol.</li>
-<li>The <code>HUBViewControllerFactory</code> protocol.</li>
-<li>The <code>HUBViewModelLoaderFactory</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBActionFactory.html">HUBActionFactory</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewControllerFactory.html">HUBViewControllerFactory</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewModelLoaderFactory.html">HUBViewModelLoaderFactory</a></code> protocol.</li>
 </ul>
-<a href='#json-schema' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='json-schema'>JSON schema</h2>
+<h2 id='json-schema' class='heading'>JSON schema</h2>
 
 <p>In the Hub Framework, a JSON schema is an object responsible for extracting model information from JSON data. Each schema has a set of defined paths, that each describe how to <q>go into</q> a JSON structure and retrieving the requested information.</p>
 
-<p>The framework ships with a default JSON schema, that is implicitly used if not overriden, but custom schemas can also be defined through <code>HUBJSONSchemaRegistry</code>.</p>
+<p>The framework ships with a default JSON schema, that is implicitly used if not overriden, but custom schemas can also be defined through <code><a href="Protocols/HUBJSONSchemaRegistry.html">HUBJSONSchemaRegistry</a></code>.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBJSONSchema</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBJSONSchema.html">HUBJSONSchema</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/json-programming-guide.html">JSON programming guide</a>.</li>
 </ul>
-<a href='#layout-trait' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='layout-trait'>Layout trait</h2>
+<h2 id='layout-trait' class='heading'>Layout trait</h2>
 
-<p>Layout traits are used to define layout relationships between components. Instead of hard-coding margins and relationships between concrete component implementations - layout traits enables components to work with layout in a more abstract way. Each component simply defines the layout traits that best describe it, in terms of layout, and then an implementation of <code>HUBComponentLayoutManager</code> computes the exact margins that should be applied to it.</p>
+<p>Layout traits are used to define layout relationships between components. Instead of hard-coding margins and relationships between concrete component implementations - layout traits enables components to work with layout in a more abstract way. Each component simply defines the layout traits that best describe it, in terms of layout, and then an implementation of <code><a href="Protocols/HUBComponentLayoutManager.html">HUBComponentLayoutManager</a></code> computes the exact margins that should be applied to it.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBComponentLayoutTrait</code> type.</li>
-<li>The <code>HUBComponent</code> protocol.</li>
+<li>The <code><a href="Type Definitions.html#/c:HUBComponentLayoutTraits.h@T@HUBComponentLayoutTrait">HUBComponentLayoutTrait</a></code> type.</li>
+<li>The <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/layout-programming-guide.html">Layout programming guide</a>.</li>
 </ul>
-<a href='#registry' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='registry'>Registry</h2>
+<h2 id='registry' class='heading'>Registry</h2>
 
 <p>In order to enable applications using the Hub Framework to easily inject implementations into it - registries are used. Each registry enables a certain type of object to be registered. There are currently four registries: for <a href="#feature">features</a>, <a href="#component">components</a>, <a href="#action">actions</a> &amp; <a href="#json-schema">JSON schemas</a>.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBFeatureRegistry</code> protocol.</li>
-<li>The <code>HUBComponentRegistry</code> protocol.</li>
-<li>The <code>HUBActionRegistry</code> protocol.</li>
-<li>The <code>HUBJSONSchemaRegistry</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBFeatureRegistry.html">HUBFeatureRegistry</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBActionRegistry.html">HUBActionRegistry</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBJSONSchemaRegistry.html">HUBJSONSchemaRegistry</a></code> protocol.</li>
 </ul>
-<a href='#view-model' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='view-model'>View model</h2>
+<h2 id='view-model' class='heading'>View model</h2>
 
 <p>The Hub Framework uses a take on the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">MVVM pattern</a> to drive its view controllers. It uses a view model to encapsulate exactly what should be rendered. A view model in turn consists of <a href="#component-model">component models</a> in three categories: <code>Header</code>, <code>Body</code> and <code>Overlay</code>. A view model also contains information like what <code>UINavigationItem</code> to use, etc.</p>
 
-<p>View models are built in content operations, using any combination of JSON and code through the <code>HUBViewModelBuilder</code> API.</p>
+<p>View models are built in content operations, using any combination of JSON and code through the <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> API.</p>
 
 <p>For more information see:</p>
 
 <ul>
-<li>The <code>HUBViewModel</code> protocol.</li>
-<li>The <code>HUBViewModelBuilder</code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewModel.html">HUBViewModel</a></code> protocol.</li>
+<li>The <code><a href="Protocols/HUBViewModelBuilder.html">HUBViewModelBuilder</a></code> protocol.</li>
 <li>The <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>.</li>
 </ul>
 
@@ -628,7 +676,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

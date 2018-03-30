@@ -8,6 +8,9 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -19,18 +22,24 @@
         <a class="header-link" href="index.html">
           HubFramework Docs
         </a>
-         (95% documented)
+         (94% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/spotify/HubFramework">
+          <a class="header-link" href="https://github.com/mmcc007/HubFramework">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
         </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="dash-feed://https%3A%2F%2Fspotify%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fmmcc007%2Egithub%2Eio%2FHubFramework%2Fdocsets%2FHubFramework%2Exml">
             <img class="header-icon" src="img/dash.png"/>
             Install in Dash
           </a>
@@ -51,6 +60,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="action-programming-guide.html">Action programming guide</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="architectual-overview.html">Architectual overview</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="component-programming-guide.html">Component programming guide</a>
@@ -91,13 +103,37 @@
                 <a class="nav-group-task-link" href="Classes/HUBComponentCollectionViewCell.html">HUBComponentCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfig.html">HUBConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigBuilder.html">HUBConfigBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBConfigViewControllerFactory.html">HUBConfigViewControllerFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBContainerView.html">HUBContainerView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBIdentifier.html">HUBIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBJSONSchemaFactory.html">HUBJSONSchemaFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/HUBLiveServiceFactory.html">HUBLiveServiceFactory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBManager.html">HUBManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBSelectionAction">HUBSelectionAction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewController.html">HUBViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)HUBViewControllerDefaultScrollHandler">HUBViewControllerDefaultScrollHandler</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/HUBViewURIPredicate.html">HUBViewURIPredicate</a>
@@ -140,10 +176,16 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:HUBDefaults.h@HUBDefaultComponentNamespace">HUBDefaultComponentNamespace</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBImageLoaderErrorDomain">HUBImageLoaderErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@HUBJSONSerializationErrorDomain">HUBJSONSerializationErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBActionTrigger.html">HUBActionTrigger</a>
@@ -162,6 +204,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBConnectivityState.html">HUBConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBImageLoaderErrorCode.html">HUBImageLoaderErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/HUBJSONSerializationErrorCode.html">HUBJSONSerializationErrorCode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/HUBScrollPosition.html">HUBScrollPosition</a>
@@ -422,7 +470,7 @@
         <section class="section">
           <div class="section-content">
             
-            <a href='#component-programming-guide' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='component-programming-guide'>Component Programming Guide</h1>
+            <h1 id='component-programming-guide' class='heading'>Component Programming Guide</h1>
 
 <p>Welcome to the Hub Framework component programming guide! This guide aims to help you gain a deeper understanding of how components work, how to build them and how to deal with things like data binding, image loading and layout.</p>
 
@@ -438,16 +486,16 @@
 <li><a href="#integrating-a-component-with-the-framework">Integrating a component with the framework</a></li>
 <li><a href="#best-practices">Best practices</a></li>
 </ul>
-<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
+<h2 id='introduction' class='heading'>Introduction</h2>
 
 <p>Components are the visual building blocks used to construct a View using the Hub Framework. Each component instance manages a <code>UIView</code>, and can be described as a simplified <code>UIViewController</code>. They each define a piece of UI that can easily be reused in any View using the Hub Framework.</p>
 
-<p>Each component instance has a 1:1 relationship with its view, and is responsible for rendering a visual representation of a <code>HUBComponentModel</code>. A component can also (optionally) have child components nested within it.</p>
+<p>Each component instance has a 1:1 relationship with its view, and is responsible for rendering a visual representation of a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>. A component can also (optionally) have child components nested within it.</p>
 
 <p>There are very few constraints on how a component may be implemented. You can, for example, choose to use Auto Layout or not, and use any <code>UIView</code> type as your view. Think of a component as your own rectangle to draw in, and whatever you draw in that rectangle is up to you.</p>
-<a href='#the-basics' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='the-basics'>The basics</h2>
+<h2 id='the-basics' class='heading'>The basics</h2>
 
-<p>To start creating a component, create a new class and make it conform to <code>HUBComponent</code>. There are a <a href="https://github.com/spotify/HubFramework/tree/master/templates/xcode/Hub%20Framework">few different templates</a> that you can use as a starting point, if you want to.</p>
+<p>To start creating a component, create a new class and make it conform to <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code>. There are a <a href="https://github.com/spotify/HubFramework/tree/master/templates/xcode/Hub%20Framework">few different templates</a> that you can use as a starting point, if you want to.</p>
 
 <p>Initially, the implementation will look something like this:</p>
 <pre class="highlight plaintext"><code>@implementation SPTMyHubComponent
@@ -486,89 +534,89 @@
 </code></pre>
 
 <p>Now, let&rsquo;s dive a bit deeper and take a look at how to implement the methods above, and further customize a component implementation.</p>
-<a href='#defining-layout-for-a-component' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='defining-layout-for-a-component'>Defining layout for a component</h3>
+<h3 id='defining-layout-for-a-component' class='heading'>Defining layout for a component</h3>
 
-<p>To be able to lay out components in a way that looks nice &amp; consistent, the Hub Framework uses a single source of truth for calculating margins and layout; an implementation of <code>HUBComponentLayoutManager</code>. However, each component is still in control of how it should be laid out, even if it doesn&rsquo;t compute the absolute metrics.</p>
+<p>To be able to lay out components in a way that looks nice &amp; consistent, the Hub Framework uses a single source of truth for calculating margins and layout; an implementation of <code><a href="Protocols/HUBComponentLayoutManager.html">HUBComponentLayoutManager</a></code>. However, each component is still in control of how it should be laid out, even if it doesn&rsquo;t compute the absolute metrics.</p>
 
 <p>This is achieved with layout traits. Each component can define a set of layout traits that best describes it in terms of layout.</p>
 
 <p>For more information; see the <a href="https://spotify.github.io/HubFramework/layout-programming-guide.html">Layout programming guide</a>.</p>
-<a href='#creating-a-component-39-s-view' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='creating-a-component-39-s-view'>Creating a component&rsquo;s view</h3>
+<h3 id='creating-a-component-39-s-view' class='heading'>Creating a component&rsquo;s view</h3>
 
 <p>Just like a view controller, a component is responsible for creating its own view - using the <code>loadView</code> method. When called, the component should instantiate an appropriate <code>UIView</code> and store it in its <code>view</code> property.</p>
 
 <p>A component is free to use any subclass of <code>UIView</code>, and the property even allows of implicit casting to any <code>UIView</code> type.</p>
 
 <p>Since the Hub Framework will take care of layouting the component&rsquo;s view, there&rsquo;s no need to perform manual frame calculations in a component implementation, instead, just give your view a <code>CGRectZero</code> frame to begin with.</p>
-<a href='#defining-a-component-39-s-view-size' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='defining-a-component-39-s-view-size'>Defining a component&rsquo;s view size</h3>
+<h3 id='defining-a-component-39-s-view-size' class='heading'>Defining a component&rsquo;s view size</h3>
 
 <p>Each component has the ability to tell the Hub Framework what size it would <strong>prefer</strong> that its view will be resized to; using the <code>preferredViewSizeForDisplayingModel:containerViewSize:</code> method. The component is already here getting access to the model that it&rsquo;s about to be used with, as well as the size of the container view that its view will be displayed in. The component is free to use any of this information to compute what size that it would prefer.</p>
 
 <p>The framework will then do its best to let the component&rsquo;s view get this size, however, it also needs to take the layout (computed according to the component&rsquo;s layout traits) into account - and may therefore slightly adjust the final size of the view.</p>
 
 <p>So an important thing to keep in mind is to never hard-code internal layout rules for a component&rsquo;s view based on its preferred view size. The internal layout of a component should always be dynamically calculated, either using frames or Auto Layout.</p>
-<a href='#reacting-to-view-changes' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='reacting-to-view-changes'>Reacting to view changes</h3>
+<h3 id='reacting-to-view-changes' class='heading'>Reacting to view changes</h3>
 
-<p>To be able to resize subviews, perform internal layout changes or start animations, you can observe your component&rsquo;s view using <code>HUBComponentViewObserver</code>. This enables you to get notified when your component&rsquo;s view was either resized, or when it appeared on the screen.</p>
-<a href='#preparing-a-component-for-reuse' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='preparing-a-component-for-reuse'>Preparing a component for reuse</h3>
+<p>To be able to resize subviews, perform internal layout changes or start animations, you can observe your component&rsquo;s view using <code><a href="Protocols/HUBComponentViewObserver.html">HUBComponentViewObserver</a></code>. This enables you to get notified when your component&rsquo;s view was either resized, or when it appeared on the screen.</p>
+<h3 id='preparing-a-component-for-reuse' class='heading'>Preparing a component for reuse</h3>
 
 <p>To reduce the memory footprint of a Hub Framework-powered View, all components are reused when possible. This means that even though a component always maintains its 1:1 relationship with its view, it will potentially be used with many different models.</p>
 
-<p>Just like a collection- or table view cell, a <code>HUBComponent</code> will be sent a message when it should prepare itself for reuse; <code>prepareViewForReuse</code>. When this is called, each component should make sure to reset any state and cleanup so that it can be reused for a new model.</p>
-<a href='#rendering-a-component-model' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='rendering-a-component-model'>Rendering a component model</h3>
+<p>Just like a collection- or table view cell, a <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> will be sent a message when it should prepare itself for reuse; <code>prepareViewForReuse</code>. When this is called, each component should make sure to reset any state and cleanup so that it can be reused for a new model.</p>
+<h3 id='rendering-a-component-model' class='heading'>Rendering a component model</h3>
 
-<p>When its time for a component or render a visual representation of a model, it will be sent the <code>configureViewWithModel:</code> message. The component itself decides what parts of the supplied <code>HUBComponentModel</code> that it wants to use, and how to bind the data contained within the model to any visual building blocks that it uses.</p>
+<p>When its time for a component or render a visual representation of a model, it will be sent the <code>configureViewWithModel:</code> message. The component itself decides what parts of the supplied <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> that it wants to use, and how to bind the data contained within the model to any visual building blocks that it uses.</p>
 
 <p>So again a component implementation is very free-form, but it&rsquo;s definitely recommended to properly document how each component implementation uses a model.</p>
 
 <p>A component is free to hold a reference to its current model, in case it needs it for any other task - but it should always make sure to reset any such reference to <code>nil</code> in <code>prepareViewForReuse</code>.</p>
-<a href='#image-handling' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='image-handling'>Image handling</h2>
+<h2 id='image-handling' class='heading'>Image handling</h2>
 
 <p>The Hub Framework provides built-in support for both local and remote images for components. However the actual images are rendered is up to each component, but the framework takes care of facilitating all loading of images.</p>
 
 <p>There are 3 categories of images supported; <code>Main</code>, <code>Background</code> and <code>Custom</code>. The last category - <code>Custom</code> - enables you to define a dictionary of custom images for certain identifiers - practically allowing you to define any number of images for a component.</p>
 
-<p>For each image, the Hub Framework creates a set of data - <code>HUBComponentImageData</code> that contains hints about how an image should be rendered - and also any remote image URL and/or local image.</p>
-<a href='#using-local-images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-local-images'>Using local images</h3>
+<p>For each image, the Hub Framework creates a set of data - <code><a href="Protocols/HUBComponentImageData.html">HUBComponentImageData</a></code> that contains hints about how an image should be rendered - and also any remote image URL and/or local image.</p>
+<h3 id='using-local-images' class='heading'>Using local images</h3>
 
-<p>In order to use a local image that was defined during the content loading phase, simply access <code>localImage</code> on a <code>HUBComponentImageData</code> object.</p>
-<a href='#using-remote-images' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-remote-images'>Using remote images</h3>
+<p>In order to use a local image that was defined during the content loading phase, simply access <code>localImage</code> on a <code><a href="Protocols/HUBComponentImageData.html">HUBComponentImageData</a></code> object.</p>
+<h3 id='using-remote-images' class='heading'>Using remote images</h3>
 
-<p>If a component supports rendering remote images that are downloaded over the network, it should conform to <code>HUBComponentWithImageHandling</code>. This will tell the framework to load images for that specific component.</p>
+<p>If a component supports rendering remote images that are downloaded over the network, it should conform to <code><a href="Protocols/HUBComponentWithImageHandling.html">HUBComponentWithImageHandling</a></code>. This will tell the framework to load images for that specific component.</p>
 
 <p>First, the component will be asked what size it would prefer that a downloaded image would be (potentially) resized to, secondly - it gets a callback once the image was downloaded.</p>
-<a href='#managing-child-components' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='managing-child-components'>Managing child components</h2>
+<h2 id='managing-child-components' class='heading'>Managing child components</h2>
 
-<p>Optionally, a component can chose to support child components - either through just the use of <code>HUBComponentModel</code> data, or with full <code>HUBComponent</code> implementations as its subviews.</p>
-<a href='#declaring-support-for-child-components' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='declaring-support-for-child-components'>Declaring support for child components</h3>
+<p>Optionally, a component can chose to support child components - either through just the use of <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> data, or with full <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> implementations as its subviews.</p>
+<h3 id='declaring-support-for-child-components' class='heading'>Declaring support for child components</h3>
 
-<p>If a component has support for child components, it should conform to the <code>HUBComponentWithChildren</code> protocol, and use its <code>childDelegate</code> to notify the Hub Framework whenever a child component appeared, disappeared, or was selected.</p>
+<p>If a component has support for child components, it should conform to the <code><a href="Protocols/HUBComponentWithChildren.html">HUBComponentWithChildren</a></code> protocol, and use its <code>childDelegate</code> to notify the Hub Framework whenever a child component appeared, disappeared, or was selected.</p>
 
 <p>This enables the author of the component to take advantage of the built in selection handling of the Hub Framework (and potentially any universal hooks that have been added - such as logging or default actions).</p>
-<a href='#using-hubcomponentmodel-data-only' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-hubcomponentmodel-data-only'>Using HUBComponentModel data only</h3>
+<h3 id='using-hubcomponentmodel-data-only' class='heading'>Using HUBComponentModel data only</h3>
 
-<p>One way of using child components is to only use the data that the Hub Framework provides for them - through the <code>childComponentModels</code> property on a <code>HUBComponentModel</code>. Doing this, a component is free to create visual representations of its children in whatever way it sees fit - such as using <q>normal</q> <code>UIView</code> instances and doing the managing of those views itself.</p>
+<p>One way of using child components is to only use the data that the Hub Framework provides for them - through the <code>childComponentModels</code> property on a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>. Doing this, a component is free to create visual representations of its children in whatever way it sees fit - such as using <q>normal</q> <code>UIView</code> instances and doing the managing of those views itself.</p>
 
-<p>This can sometimes be the preferred approach for providing lightweight support for child components - without the level of dynamism that using <code>HUBComponent</code> implementations provides.</p>
-<a href='#using-nested-hubcomponents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using-nested-hubcomponents'>Using nested HUBComponents</h3>
+<p>This can sometimes be the preferred approach for providing lightweight support for child components - without the level of dynamism that using <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> implementations provides.</p>
+<h3 id='using-nested-hubcomponents' class='heading'>Using nested HUBComponents</h3>
 
-<p>To make a component that can render any child component; use nested <code>HUBComponent</code> implementations. You can easily create such child components using the <code>component:createChildComponentAtIndex:</code> method on your component&rsquo;s <code>childDelegate</code>.</p>
+<p>To make a component that can render any child component; use nested <code><a href="Protocols/HUBComponent.html">HUBComponent</a></code> implementations. You can easily create such child components using the <code>component:createChildComponentAtIndex:</code> method on your component&rsquo;s <code>childDelegate</code>.</p>
 
 <p>The component returned from this method will have a loaded view and be resized to its default size - but it&rsquo;s up to each component implementation to manage its child components.</p>
-<a href='#saving-and-restoring-ui-state' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='saving-and-restoring-ui-state'>Saving and restoring UI state</h2>
+<h2 id='saving-and-restoring-ui-state' class='heading'>Saving and restoring UI state</h2>
 
 <p>Some components have specific UI states that ideally should be preserved between reuses when the same model is rendered. For example, if a component is scrollable horizontally you might want to retain the scroll position per model, so that state isn&rsquo;t lost when the component is reused.</p>
 
-<p>To do that, make your component conform to <code>HUBComponentWithRestorableUIState</code>. This will make the Hub Framework call <code>currentUIState</code> on your component before each reuse takes place - giving you a chance to return a UI state that should be saved.</p>
+<p>To do that, make your component conform to <code><a href="Protocols/HUBComponentWithRestorableUIState.html">HUBComponentWithRestorableUIState</a></code>. This will make the Hub Framework call <code>currentUIState</code> on your component before each reuse takes place - giving you a chance to return a UI state that should be saved.</p>
 
 <p>You can use any type to model your UI state. For example, in the case of a scroll position an <code>NSValue</code> containing a <code>CGPoint</code> is probably a good choice.</p>
 
 <p>Once your component has started to render a model for which a UI state was previously saved, the framework will call <code>restoreUIState:</code> on your component with the saved state, allowing the component to restore it.</p>
 
 <p>Thanks to this API, you can hide the fact that components are reused for your users, as from their perspective it will look like the component was there all along.</p>
-<a href='#responding-to-user-interactions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='responding-to-user-interactions'>Responding to user interactions</h2>
+<h2 id='responding-to-user-interactions' class='heading'>Responding to user interactions</h2>
 
-<p>If you want your component to adapt its appearance when the user interacts with it (mimicking the behavior as when highlighting or selecting a <code>UITableViewCell</code>), you can make it conform to <code>HUBComponentWithSelectionState</code>.</p>
+<p>If you want your component to adapt its appearance when the user interacts with it (mimicking the behavior as when highlighting or selecting a <code>UITableViewCell</code>), you can make it conform to <code><a href="Protocols/HUBComponentWithSelectionState.html">HUBComponentWithSelectionState</a></code>.</p>
 
 <p>The Hub Framework supports two selection states; <code>Highlighted</code> and <code>Selected</code>. Your component will automatically be called and asked to update its view for a new selection state when the user either touches it (highlight), or taps it (selection).</p>
 
@@ -588,17 +636,17 @@
     }
 }
 </code></pre>
-<a href='#integrating-a-component-with-the-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='integrating-a-component-with-the-framework'>Integrating a component with the framework</h2>
+<h2 id='integrating-a-component-with-the-framework' class='heading'>Integrating a component with the framework</h2>
 
-<p>Components are integrated with the Hub Framework through a <code>HUBComponentFactory</code> implementation. Usually each feature that supplies components into the framework will have its own factory implementation.</p>
+<p>Components are integrated with the Hub Framework through a <code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code> implementation. Usually each feature that supplies components into the framework will have its own factory implementation.</p>
 
-<p>You register a factory with <code>HUBComponentRegistry</code>, available on the application&rsquo;s <code>HUBManager</code>. Each factory is registered for a certain <code>namespace</code>, which will make the Hub Framework dispatch to that factory if a <code>HUBComponentModel</code> has that component <code>namespace</code>.</p>
+<p>You register a factory with <code><a href="Protocols/HUBComponentRegistry.html">HUBComponentRegistry</a></code>, available on the application&rsquo;s <code><a href="Classes/HUBManager.html">HUBManager</a></code>. Each factory is registered for a certain <code>namespace</code>, which will make the Hub Framework dispatch to that factory if a <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> has that component <code>namespace</code>.</p>
 
 <p>A factory is responsible for creating new component instances for a given <code>name</code>, or returning <code>nil</code> if the supplied <code>name</code> is not supported by the factory.</p>
 
 <p><em>(For more information about component <code>namespaces</code> and <code>names</code>, see the <a href="https://spotify.github.io/HubFramework/content-programming-guide.html">Content programming guide</a>).</em></p>
 
-<p>To create a factory implementation, add a new <code>class</code> and make it conform to <code>HUBComponentFactory</code>:</p>
+<p>To create a factory implementation, add a new <code>class</code> and make it conform to <code><a href="Protocols/HUBComponentFactory.html">HUBComponentFactory</a></code>:</p>
 <pre class="highlight plaintext"><code>@implementation SPTHubComponentFactory
 
 - (nullable id&lt;HUBComponent&gt;)createComponentForName:(NSString *)name
@@ -612,25 +660,25 @@
 
 @end
 </code></pre>
-<a href='#best-practices' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='best-practices'>Best practices</h2>
+<h2 id='best-practices' class='heading'>Best practices</h2>
 
-<p>Components and their corresponding models (<code>HUBComponentModel</code>) are very free-form by design. We didn&rsquo;t want to strictly enforce how data is bound to views, or which <code>UIView</code> types that are usable for components, since that won&rsquo;t scale for new UI ideas and large teams. We want component authors to be able to move really fast, without a lot of restrictions.</p>
+<p>Components and their corresponding models (<code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>) are very free-form by design. We didn&rsquo;t want to strictly enforce how data is bound to views, or which <code>UIView</code> types that are usable for components, since that won&rsquo;t scale for new UI ideas and large teams. We want component authors to be able to move really fast, without a lot of restrictions.</p>
 
 <p>However, there are some best practices that are recommended to follow when building new components, so that they become intuitive and easy to use for other developers. Here are some things to keep in mind:</p>
-<a href='#use-the-properties-on-code-hubcomponentmodel-code-as-documented' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='use-the-properties-on-code-hubcomponentmodel-code-as-documented'>Use the properties on <code>HUBComponentModel</code> as documented</h4>
+<h4 id='use-the-properties-on-code-hubcomponentmodel-code-as-documented' class='heading'>Use the properties on <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> as documented</h4>
 
-<p>All the properties that are available as first-class citizens on <code>HUBComponentModel</code> have documentation detailing their recommended usage. For example, use <code>title</code> for the most prominent piece of text in your component, then <code>subtitle</code> etc. That way your component will have a predictable behavior when used with various models.</p>
-<a href='#use-code-customdata-code-only-when-customization-is-needed' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='use-code-customdata-code-only-when-customization-is-needed'>Use <code>customData</code> only when customization is needed</h4>
+<p>All the properties that are available as first-class citizens on <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> have documentation detailing their recommended usage. For example, use <code>title</code> for the most prominent piece of text in your component, then <code>subtitle</code> etc. That way your component will have a predictable behavior when used with various models.</p>
+<h4 id='use-code-customdata-code-only-when-customization-is-needed' class='heading'>Use <code>customData</code> only when customization is needed</h4>
 
-<p>Both <code>HUBComponentModel</code> and <code>HUBViewModel</code> have a <code>customData</code> property that enables you to set custom keys &amp; values that can be used by your feature &amp; components. This is an essential part of the API as it provides an easy way to extend the models for new ideas &amp; concepts that we didn&rsquo;t consider when designing the models.</p>
+<p>Both <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> and <code><a href="Protocols/HUBViewModel.html">HUBViewModel</a></code> have a <code>customData</code> property that enables you to set custom keys &amp; values that can be used by your feature &amp; components. This is an essential part of the API as it provides an easy way to extend the models for new ideas &amp; concepts that we didn&rsquo;t consider when designing the models.</p>
 
-<p>With that being said, if there is a way to use the properties already available on <code>HUBComponentModel</code>, that is definitely preferred. Using the properties, you&rsquo;ll get things like automatic type checking and compatibility with other components.</p>
+<p>With that being said, if there is a way to use the properties already available on <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code>, that is definitely preferred. Using the properties, you&rsquo;ll get things like automatic type checking and compatibility with other components.</p>
 
-<p>If you encounter a piece of data that is common across multiple components &amp; applications, and should be included in <code>HUBComponentModel</code> as a first-class property, feel free to open an issue or send a PR!</p>
-<a href='#document-how-your-component-behaves' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='document-how-your-component-behaves'>Document how your component behaves</h4>
+<p>If you encounter a piece of data that is common across multiple components &amp; applications, and should be included in <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> as a first-class property, feel free to open an issue or send a PR!</p>
+<h4 id='document-how-your-component-behaves' class='heading'>Document how your component behaves</h4>
 
-<p>Components have built-in reusability, so it&rsquo;s recommended that you prepare them for reuse - not only for different models - but for different developers as well. It&rsquo;s recommended to thoroughly document what <code>HUBComponentModel</code> data your component uses, and how it behaves in terms of interactions, animations, etc.</p>
-<a href='#use-the-framework-for-as-many-events-as-you-can' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='use-the-framework-for-as-many-events-as-you-can'>Use the framework for as many events as you can</h4>
+<p>Components have built-in reusability, so it&rsquo;s recommended that you prepare them for reuse - not only for different models - but for different developers as well. It&rsquo;s recommended to thoroughly document what <code><a href="Protocols/HUBComponentModel.html">HUBComponentModel</a></code> data your component uses, and how it behaves in terms of interactions, animations, etc.</p>
+<h4 id='use-the-framework-for-as-many-events-as-you-can' class='heading'>Use the framework for as many events as you can</h4>
 
 <p>The Hub Framework provides a lot of built-in functionality to handle events (like selection, appearance, etc) - and rather than building your own functionality for those kind of events - it&rsquo;s recommended to leverage the framework. That way you&rsquo;ll get a consistent behavior with other components, and reduce code duplication.</p>
 
@@ -644,7 +692,7 @@
     </div>
     <section class="footer">
       <p>Copyright © 2015-2016 Spotify AB</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
